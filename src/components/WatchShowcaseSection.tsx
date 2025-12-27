@@ -1,15 +1,15 @@
-import watchMatch from "@/assets/watch-match.png";
+import videoMenu from "@/assets/video-menu.webm";
+import videoMatch from "@/assets/video-match.webm";
 import watchStats from "@/assets/watch-stats.png";
-import watchMenu from "@/assets/watch-menu.png";
 
 const watches = [
   {
-    image: watchMenu,
+    video: videoMenu,
     title: "Configuração Rápida",
     description: "Configure sets, games e tie-break em segundos",
   },
   {
-    image: watchMatch,
+    video: videoMatch,
     title: "Controle da Partida",
     description: "Registre cada ponto com facilidade",
   },
@@ -46,14 +46,25 @@ const WatchShowcaseSection = () => {
               className="flex flex-col items-center group"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              {/* Watch image */}
+              {/* Watch media */}
               <div className="relative mb-6">
                 <div className="absolute inset-0 bg-tennis-green/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <img
-                  src={watch.image}
-                  alt={watch.title}
-                  className="w-64 h-64 object-contain relative z-10 group-hover:scale-105 transition-transform duration-500"
-                />
+                {'video' in watch && watch.video ? (
+                  <video
+                    src={watch.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-64 h-64 object-contain relative z-10 group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <img
+                    src={'image' in watch ? watch.image : ''}
+                    alt={watch.title}
+                    className="w-64 h-64 object-contain relative z-10 group-hover:scale-105 transition-transform duration-500"
+                  />
+                )}
               </div>
 
               {/* Content */}
