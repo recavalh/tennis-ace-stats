@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-24 overflow-hidden">
       {/* Background glow effects */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-tennis-green/10 rounded-full blur-[150px] animate-pulse-slow" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-tennis-red/10 rounded-full blur-[150px] animate-pulse-slow" style={{ animationDelay: "2s" }} />
@@ -16,7 +16,7 @@ const HeroSection = () => {
           <img 
             src={logo} 
             alt="Ace-Stats Logo" 
-            className="w-32 h-32 md:w-40 md:h-40 mx-auto animate-float"
+            className="w-32 h-32 md:w-40 md:h-40 mx-auto animate-float rounded-3xl"
           />
         </div>
 
@@ -47,7 +47,7 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up animate-delay-500">
           <Button variant="hero" size="xl" className="w-full sm:w-auto">
             <Watch className="w-5 h-5 mr-2" />
-            Baixar para WearOS
+            Baixar na Play Store
           </Button>
           <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
             <BarChart3 className="w-5 h-5 mr-2" />
