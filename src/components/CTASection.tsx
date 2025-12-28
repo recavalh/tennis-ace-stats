@@ -52,7 +52,7 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="hero" size="xl" className="w-full sm:w-auto">
               <Watch className="w-5 h-5 mr-2" />
-              Baixar para WearOS
+              Baixar na Play Store
             </Button>
             <Button variant="glass" size="xl" className="w-full sm:w-auto">
               <ExternalLink className="w-5 h-5 mr-2" />
