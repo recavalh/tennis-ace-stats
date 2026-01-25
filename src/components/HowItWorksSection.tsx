@@ -1,33 +1,36 @@
+import { useTranslation } from "react-i18next";
 import { Watch, Play, BarChart3, TrendingUp } from "lucide-react";
 
-const steps = [
-  {
-    number: "01",
-    icon: Watch,
-    title: "Instale o App",
-    description: "Baixe o tennis.wear da Google Play Store no seu smartwatch WearOS.",
-  },
-  {
-    number: "02",
-    icon: Play,
-    title: "Inicie a Partida",
-    description: "Configure o formato do jogo e comece a registrar cada ponto.",
-  },
-  {
-    number: "03",
-    icon: BarChart3,
-    title: "Sincronize os Dados",
-    description: "Exporte suas partidas para a plataforma Ace-Stats na web.",
-  },
-  {
-    number: "04",
-    icon: TrendingUp,
-    title: "Analise e Evolua",
-    description: "Visualize seus padrões de jogo e identifique pontos de melhoria.",
-  },
-];
-
 const HowItWorksSection = () => {
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      number: "01",
+      icon: Watch,
+      titleKey: "howItWorks.steps.install.title",
+      descriptionKey: "howItWorks.steps.install.description",
+    },
+    {
+      number: "02",
+      icon: Play,
+      titleKey: "howItWorks.steps.start.title",
+      descriptionKey: "howItWorks.steps.start.description",
+    },
+    {
+      number: "03",
+      icon: BarChart3,
+      titleKey: "howItWorks.steps.sync.title",
+      descriptionKey: "howItWorks.steps.sync.description",
+    },
+    {
+      number: "04",
+      icon: TrendingUp,
+      titleKey: "howItWorks.steps.analyze.title",
+      descriptionKey: "howItWorks.steps.analyze.description",
+    },
+  ];
+
   return (
     <section id="how-it-works" className="py-24 px-4 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-card/30 via-transparent to-card/30" />
@@ -36,11 +39,11 @@ const HowItWorksSection = () => {
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="text-foreground">Como </span>
-            <span className="text-gradient-green">Funciona</span>
+            <span className="text-foreground">{t("howItWorks.title")} </span>
+            <span className="text-gradient-green">{t("howItWorks.titleHighlight")}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Simples de usar, poderoso nos resultados
+            {t("howItWorks.subtitle")}
           </p>
         </div>
 
@@ -66,10 +69,10 @@ const HowItWorksSection = () => {
 
                 {/* Content */}
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                  {step.title}
+                  {t(step.titleKey)}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed max-w-[200px]">
-                  {step.description}
+                  {t(step.descriptionKey)}
                 </p>
               </div>
             </div>

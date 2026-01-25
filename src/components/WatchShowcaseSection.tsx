@@ -1,26 +1,29 @@
+import { useTranslation } from "react-i18next";
 import videoMenu from "@/assets/video-menu.webm";
 import videoMatch from "@/assets/video-match.webm";
 import watchStats from "@/assets/watch-stats.png";
 
-const watches = [
-  {
-    video: videoMenu,
-    title: "Configuração Rápida",
-    description: "Configure sets, games e tie-break em segundos",
-  },
-  {
-    video: videoMatch,
-    title: "Controle da Partida",
-    description: "Registre cada ponto com facilidade",
-  },
-  {
-    image: watchStats,
-    title: "Estatísticas Completas",
-    description: "Acompanhe seu desempenho em tempo real",
-  },
-];
-
 const WatchShowcaseSection = () => {
+  const { t } = useTranslation();
+
+  const watches = [
+    {
+      video: videoMenu,
+      titleKey: "watchShowcase.items.quickSetup.title",
+      descriptionKey: "watchShowcase.items.quickSetup.description",
+    },
+    {
+      video: videoMatch,
+      titleKey: "watchShowcase.items.matchControl.title",
+      descriptionKey: "watchShowcase.items.matchControl.description",
+    },
+    {
+      image: watchStats,
+      titleKey: "watchShowcase.items.completeStats.title",
+      descriptionKey: "watchShowcase.items.completeStats.description",
+    },
+  ];
+
   return (
     <section id="app" className="py-24 px-4 relative overflow-hidden">
       {/* Background glow */}
@@ -30,11 +33,11 @@ const WatchShowcaseSection = () => {
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="text-foreground">Feito para o </span>
-            <span className="text-gradient-green">seu Pulso</span>
+            <span className="text-foreground">{t("watchShowcase.title")} </span>
+            <span className="text-gradient-green">{t("watchShowcase.titleHighlight")}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Interface otimizada para smartwatches Android com WearOS
+            {t("watchShowcase.subtitle")}
           </p>
         </div>
 
@@ -42,7 +45,7 @@ const WatchShowcaseSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {watches.map((watch, index) => (
             <div
-              key={watch.title}
+              key={watch.titleKey}
               className="flex flex-col items-center group"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -61,7 +64,7 @@ const WatchShowcaseSection = () => {
                 ) : (
                   <img
                     src={'image' in watch ? watch.image : ''}
-                    alt={watch.title}
+                    alt={t(watch.titleKey)}
                     className="w-64 h-64 object-contain relative z-10 group-hover:scale-105 transition-transform duration-500"
                   />
                 )}
@@ -69,10 +72,10 @@ const WatchShowcaseSection = () => {
 
               {/* Content */}
               <h3 className="font-display text-xl font-semibold text-foreground mb-2 text-center">
-                {watch.title}
+                {t(watch.titleKey)}
               </h3>
               <p className="text-muted-foreground text-center max-w-xs">
-                {watch.description}
+                {t(watch.descriptionKey)}
               </p>
             </div>
           ))}

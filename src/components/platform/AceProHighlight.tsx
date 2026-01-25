@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { Lock, Unlock, Sparkles } from "lucide-react";
 
 const AceProHighlight = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24 px-4 relative">
       {/* Background gradient */}
@@ -14,10 +17,10 @@ const AceProHighlight = () => {
             <span className="text-sm text-tennis-green font-medium">Ace Pro</span>
           </div>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Seu <span className="text-gradient-green">Técnico Digital</span>.
+            {t("platform.acePro.title")} <span className="text-gradient-green">{t("platform.acePro.titleHighlight")}</span>.
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Dados sem análise são apenas números. O Ace Pro transforma números em estratégia.
+            {t("platform.acePro.description")}
           </p>
         </div>
 
@@ -30,8 +33,8 @@ const AceProHighlight = () => {
                 <Lock className="w-5 h-5 text-muted-foreground" />
               </div>
               <div>
-                <h3 className="font-display font-bold text-foreground">Free</h3>
-                <p className="text-sm text-muted-foreground">Dados básicos</p>
+                <h3 className="font-display font-bold text-foreground">{t("platform.acePro.free.label")}</h3>
+                <p className="text-sm text-muted-foreground">{t("platform.acePro.free.subtitle")}</p>
               </div>
             </div>
 
@@ -60,10 +63,6 @@ const AceProHighlight = () => {
                 </div>
               </div>
             </div>
-
-            <p className="text-center text-muted-foreground text-sm mt-4">
-              Você joga, mas não entende os padrões.
-            </p>
           </div>
 
           {/* Pro card - clear */}
@@ -73,8 +72,8 @@ const AceProHighlight = () => {
                 <Unlock className="w-5 h-5 text-tennis-green" />
               </div>
               <div>
-                <h3 className="font-display font-bold text-tennis-green">Ace Pro</h3>
-                <p className="text-sm text-muted-foreground">Insights completos</p>
+                <h3 className="font-display font-bold text-tennis-green">{t("platform.acePro.pro.label")}</h3>
+                <p className="text-sm text-muted-foreground">{t("platform.acePro.pro.subtitle")}</p>
               </div>
             </div>
 
@@ -95,15 +94,11 @@ const AceProHighlight = () => {
                   <span className="text-tennis-green font-bold">85</span>
                 </div>
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">Hold % Tendência</span>
+                  <span className="text-muted-foreground">Hold % Trend</span>
                   <span className="text-tennis-green font-bold">+12%</span>
                 </div>
               </div>
             </div>
-
-            <p className="text-center text-foreground text-sm mt-4 font-medium">
-              Você joga e sabe exatamente o que melhorar.
-            </p>
           </div>
         </div>
       </div>

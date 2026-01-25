@@ -1,45 +1,48 @@
+import { useTranslation } from "react-i18next";
 import { Watch, BarChart3, Zap, Target, TrendingUp, Smartphone } from "lucide-react";
 
-const features = [
-  {
-    icon: Watch,
-    title: "Controle no Pulso",
-    description: "Registre winners, erros forçados e não forçados diretamente do seu smartwatch durante a partida.",
-    color: "tennis-green",
-  },
-  {
-    icon: Target,
-    title: "Detalhes de Cada Ponto",
-    description: "Categorize seus pontos: baseline, volley, smash ou return winner. Saiba exatamente onde você brilha.",
-    color: "tennis-blue",
-  },
-  {
-    icon: BarChart3,
-    title: "Estatísticas Detalhadas",
-    description: "Games no serviço, pontos na recepção, break points, deuces e muito mais em tempo real.",
-    color: "tennis-green",
-  },
-  {
-    icon: TrendingUp,
-    title: "Análise de Evolução",
-    description: "Acompanhe seu progresso ao longo do tempo e identifique padrões no seu jogo.",
-    color: "tennis-red",
-  },
-  {
-    icon: Zap,
-    title: "Interface Intuitiva",
-    description: "Modo simples (2 botões) ou avançado (6 botões). Escolha o que melhor se adapta ao seu estilo.",
-    color: "tennis-blue",
-  },
-  {
-    icon: Smartphone,
-    title: "Sincronização Web",
-    description: "Exporte seus dados para análise completa na plataforma web. Visualize gráficos e relatórios.",
-    color: "tennis-green",
-  },
-];
-
 const FeaturesSection = () => {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: Watch,
+      titleKey: "features.items.wristControl.title",
+      descriptionKey: "features.items.wristControl.description",
+      color: "tennis-green",
+    },
+    {
+      icon: Target,
+      titleKey: "features.items.pointDetails.title",
+      descriptionKey: "features.items.pointDetails.description",
+      color: "tennis-blue",
+    },
+    {
+      icon: BarChart3,
+      titleKey: "features.items.detailedStats.title",
+      descriptionKey: "features.items.detailedStats.description",
+      color: "tennis-green",
+    },
+    {
+      icon: TrendingUp,
+      titleKey: "features.items.evolutionAnalysis.title",
+      descriptionKey: "features.items.evolutionAnalysis.description",
+      color: "tennis-red",
+    },
+    {
+      icon: Zap,
+      titleKey: "features.items.intuitiveInterface.title",
+      descriptionKey: "features.items.intuitiveInterface.description",
+      color: "tennis-blue",
+    },
+    {
+      icon: Smartphone,
+      titleKey: "features.items.webSync.title",
+      descriptionKey: "features.items.webSync.description",
+      color: "tennis-green",
+    },
+  ];
+
   return (
     <section id="features" className="py-24 px-4 relative">
       {/* Background effect */}
@@ -49,11 +52,11 @@ const FeaturesSection = () => {
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="text-gradient-green">Recursos</span>{" "}
-            <span className="text-foreground">Poderosos</span>
+            <span className="text-gradient-green">{t("features.title")}</span>{" "}
+            <span className="text-foreground">{t("features.titleHighlight")}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Tudo que você precisa para elevar seu jogo de tênis ao próximo nível
+            {t("features.subtitle")}
           </p>
         </div>
 
@@ -61,7 +64,7 @@ const FeaturesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div
-              key={feature.title}
+              key={feature.titleKey}
               className="group glass-card rounded-2xl p-6 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_hsl(145_63%_42%/0.15)]"
               style={{ animationDelay: `${index * 100}ms` }}
             >
@@ -72,10 +75,10 @@ const FeaturesSection = () => {
 
               {/* Content */}
               <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                {feature.title}
+                {t(feature.titleKey)}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                {feature.description}
+                {t(feature.descriptionKey)}
               </p>
             </div>
           ))}

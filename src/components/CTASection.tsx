@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Watch, ExternalLink } from "lucide-react";
 import logo from "@/assets/logo.png";
 import BetaAccessModal from "@/components/BetaAccessModal";
 
 const CTASection = () => {
+  const { t } = useTranslation();
   const [betaModalOpen, setBetaModalOpen] = useState(false);
 
   return (
@@ -26,29 +28,28 @@ const CTASection = () => {
 
           {/* Content */}
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            <span className="text-foreground">Pronto para </span>
-            <span className="text-gradient-green">Elevar seu Jogo</span>
+            <span className="text-foreground">{t("cta.title")} </span>
+            <span className="text-gradient-green">{t("cta.titleHighlight")}</span>
             <span className="text-foreground">?</span>
           </h2>
           
           <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-            Junte-se aos tenistas que já estão usando dados para melhorar sua performance. 
-            Comece gratuitamente hoje.
+            {t("cta.description")}
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 mb-10 max-w-lg mx-auto">
             <div>
               <div className="font-display text-2xl md:text-3xl font-bold text-tennis-green">500+</div>
-              <div className="text-muted-foreground text-sm">Partidas Registradas</div>
+              <div className="text-muted-foreground text-sm">{t("cta.stats.matches")}</div>
             </div>
             <div>
               <div className="font-display text-2xl md:text-3xl font-bold text-tennis-green">50K+</div>
-              <div className="text-muted-foreground text-sm">Pontos Analisados</div>
+              <div className="text-muted-foreground text-sm">{t("cta.stats.points")}</div>
             </div>
             <div>
               <div className="font-display text-2xl md:text-3xl font-bold text-tennis-green">100+</div>
-              <div className="text-muted-foreground text-sm">Jogadores Ativos</div>
+              <div className="text-muted-foreground text-sm">{t("cta.stats.players")}</div>
             </div>
           </div>
 
@@ -56,11 +57,11 @@ const CTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="hero" size="xl" className="w-full sm:w-auto" onClick={() => setBetaModalOpen(true)}>
               <Watch className="w-5 h-5 mr-2" />
-              Baixar na Play Store
+              {t("cta.downloadBtn")}
             </Button>
             <Button variant="glass" size="xl" className="w-full sm:w-auto" onClick={() => setBetaModalOpen(true)}>
               <ExternalLink className="w-5 h-5 mr-2" />
-              Acessar Plataforma Web
+              {t("cta.platformBtn")}
             </Button>
           </div>
         </div>
