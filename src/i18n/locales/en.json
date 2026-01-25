@@ -1,0 +1,254 @@
+{
+  "nav": {
+    "features": "Features",
+    "app": "App",
+    "howItWorks": "How It Works",
+    "download": "Download"
+  },
+  "hero": {
+    "badge": "Exclusive for WearOS",
+    "subtitle": "Wearable Tennis Performance",
+    "description": "Track every point, analyze your stats, and improve your game. Right from your Android smartwatch.",
+    "downloadBtn": "Download on Play Store",
+    "statsBtn": "View Statistics"
+  },
+  "features": {
+    "title": "Powerful",
+    "titleHighlight": "Features",
+    "subtitle": "Everything you need to take your tennis game to the next level",
+    "items": {
+      "wristControl": {
+        "title": "Wrist Control",
+        "description": "Track winners, forced and unforced errors directly from your smartwatch during the match."
+      },
+      "pointDetails": {
+        "title": "Point Details",
+        "description": "Categorize your points: baseline, volley, smash or return winner. Know exactly where you shine."
+      },
+      "detailedStats": {
+        "title": "Detailed Statistics",
+        "description": "Service games, reception points, break points, deuces and much more in real time."
+      },
+      "evolutionAnalysis": {
+        "title": "Evolution Analysis",
+        "description": "Track your progress over time and identify patterns in your game."
+      },
+      "intuitiveInterface": {
+        "title": "Intuitive Interface",
+        "description": "Simple mode (2 buttons) or advanced (6 buttons). Choose what best fits your style."
+      },
+      "webSync": {
+        "title": "Web Sync",
+        "description": "Export your data for complete analysis on the web platform. View charts and reports."
+      }
+    }
+  },
+  "watchShowcase": {
+    "title": "Made for",
+    "titleHighlight": "Your Wrist",
+    "subtitle": "Interface optimized for Android smartwatches with WearOS",
+    "items": {
+      "quickSetup": {
+        "title": "Quick Setup",
+        "description": "Configure sets, games and tie-break in seconds"
+      },
+      "matchControl": {
+        "title": "Match Control",
+        "description": "Record each point with ease"
+      },
+      "completeStats": {
+        "title": "Complete Statistics",
+        "description": "Track your performance in real time"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How It",
+    "titleHighlight": "Works",
+    "subtitle": "Simple to use, powerful in results",
+    "steps": {
+      "install": {
+        "title": "Install the App",
+        "description": "Download tennis.wear from Google Play Store on your WearOS smartwatch."
+      },
+      "start": {
+        "title": "Start the Match",
+        "description": "Configure the game format and start recording each point."
+      },
+      "sync": {
+        "title": "Sync Your Data",
+        "description": "Export your matches to the Ace-Stats web platform."
+      },
+      "analyze": {
+        "title": "Analyze & Evolve",
+        "description": "Visualize your game patterns and identify areas for improvement."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to",
+    "titleHighlight": "Level Up Your Game",
+    "description": "Join the tennis players who are already using data to improve their performance. Start for free today.",
+    "downloadBtn": "Download on Play Store",
+    "platformBtn": "Access Web Platform",
+    "stats": {
+      "matches": "Matches Recorded",
+      "points": "Points Analyzed",
+      "players": "Active Players"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Ace-Stats. All rights reserved."
+  },
+  "betaModal": {
+    "title": "Closed Beta",
+    "description": "Ace-Stats is in internal testing phase. Request access to be one of the first to try it!",
+    "benefits": {
+      "earlyAccess": "Early access to all features",
+      "community": "Join the testers community",
+      "shape": "Help shape the future of the app"
+    },
+    "requestAccess": "Request Access",
+    "close": "Close"
+  },
+  "platform": {
+    "hero": {
+      "title1": "Stop",
+      "titleHighlight1": "Guessing",
+      "title2": "Start",
+      "titleHighlight2": "Knowing",
+      "subtitle": "The ultimate tracking for tennis players who want to improve.",
+      "subtitleHighlight": "Record unlimited matches for free.",
+      "subtitleEnd": "Unlock coach-level intelligence with",
+      "startFree": "Start Free Now",
+      "viewDemo": "View Pro Demo",
+      "trustBadges": {
+        "noCard": "No credit card",
+        "quickSetup": "Setup in 2 minutes",
+        "cancelAnytime": "Cancel anytime"
+      },
+      "mockUser": {
+        "level": "Level 4.0",
+        "matches": "matches"
+      }
+    },
+    "problem": {
+      "title": "You play well, but don't know why you lost?",
+      "items": {
+        "notebook": {
+          "title": "Goodbye notebook.",
+          "description": "No more manual notes that don't generate real data."
+        },
+        "mind": {
+          "title": "Understand your mind.",
+          "description": "Discover your 'Clutch Factor' and how you react under pressure."
+        },
+        "rivals": {
+          "title": "Beat your rivals.",
+          "description": "Detailed history against each opponent to know exactly how to win."
+        }
+      }
+    },
+    "featureShowcase": {
+      "title": "Much more than a",
+      "titleHighlight": "scoreboard",
+      "items": {
+        "unlimited": {
+          "title": "Unlimited Recording",
+          "description": "We never stop your game. Record as many matches as you want."
+        },
+        "wearos": {
+          "title": "Wear OS Integration",
+          "description": "Score points from your wrist without touching your phone."
+        },
+        "metrics": {
+          "title": "Gold Metrics (Pro)",
+          "description": "Hold %, Break Points Converted, Consistency."
+        },
+        "evolution": {
+          "title": "Evolution",
+          "description": "Charts showing if your serve is improving or declining."
+        }
+      }
+    },
+    "acePro": {
+      "title": "Ace Pro:",
+      "titleHighlight": "Your Digital Coach",
+      "description": "Data without analysis is just numbers. Ace Pro transforms numbers into strategy.",
+      "free": {
+        "label": "Free",
+        "subtitle": "Your raw data"
+      },
+      "pro": {
+        "label": "Pro",
+        "subtitle": "Winning insights"
+      }
+    },
+    "pricing": {
+      "title": "Choose your",
+      "titleHighlight": "plan",
+      "subtitle": "Start free and upgrade when ready. No commitment.",
+      "popular": "Most Popular",
+      "free": {
+        "name": "Free",
+        "subtitle": "The Habit",
+        "price": "$0",
+        "period": "/ month",
+        "description": "For those who want to record everything.",
+        "cta": "Start Free"
+      },
+      "pro": {
+        "name": "Ace Pro",
+        "subtitle": "The Evolution",
+        "price": "$4.99",
+        "period": "/ month",
+        "priceNote": "Price of a grip",
+        "description": "For those who want to win more.",
+        "cta": "Subscribe Ace Pro"
+      },
+      "features": {
+        "unlimitedMatches": "Unlimited Matches",
+        "unlimitedRivals": "Unlimited Rivals",
+        "basicStats": "Basic Game Stats",
+        "evolutionAnalysis": "Evolution Analysis",
+        "rivalFilters": "Rival Filters",
+        "aiInsights": "AI Insights",
+        "allFree": "Everything in Free",
+        "rivalryMode": "Rivalry Mode (Rival Filter)",
+        "goldMetrics": "Gold Metrics (Clutch, Hold%)",
+        "trendGraphs": "Trend Graphs",
+        "autoInsights": "Automatic AI Insights",
+        "prioritySupport": "Priority Support"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked",
+      "titleHighlight": "Questions",
+      "items": {
+        "watches": {
+          "question": "Which watches does it work on?",
+          "answer": "Ace-Stats works on any smartwatch with WearOS 2.0 or higher, including Samsung Galaxy Watch 4/5/6, Google Pixel Watch, TicWatch and other compatible devices."
+        },
+        "cancel": {
+          "question": "Can I cancel anytime?",
+          "answer": "Yes! The Ace Pro plan can be cancelled at any time, without fees or penalties. You'll continue to have access until the end of the paid period."
+        },
+        "freeForever": {
+          "question": "Is the Free plan really free forever?",
+          "answer": "Yes, absolutely! The Free plan allows unlimited recording of matches and rivals forever. No tricks, no temporary limitations."
+        },
+        "dataSync": {
+          "question": "How does data synchronization work?",
+          "answer": "After each match, you can export data from the watch to the web platform via Bluetooth or Wi-Fi. Synchronization takes just a few seconds."
+        }
+      }
+    },
+    "finalCta": {
+      "title": "Your next victory starts with",
+      "titleHighlight": "data",
+      "description": "Join hundreds of tennis players who have already transformed the way they play and evolve.",
+      "cta": "Create Free Account",
+      "trustText": "Free forever • No credit card • Setup in 2 minutes"
+    }
+  }
+}

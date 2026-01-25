@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Dialog,
   DialogContent,
@@ -17,6 +17,8 @@ interface BetaAccessModalProps {
 const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScmIgziJHIsmrT_acXjXuDtJcZ0yprOzqm_4Bx-qFd6dNWMQw/viewform";
 
 const BetaAccessModal = ({ open, onOpenChange }: BetaAccessModalProps) => {
+  const { t } = useTranslation();
+
   const handleAccessForm = () => {
     window.open(GOOGLE_FORM_URL, "_blank", "noopener,noreferrer");
   };
@@ -29,10 +31,10 @@ const BetaAccessModal = ({ open, onOpenChange }: BetaAccessModalProps) => {
             <TestTube className="w-8 h-8 text-tennis-green" />
           </div>
           <DialogTitle className="font-display text-2xl text-center">
-            Beta Fechado
+            {t("betaModal.title")}
           </DialogTitle>
           <DialogDescription className="text-center text-base">
-            O Ace-Stats está em fase de testes internos. Solicite acesso para ser um dos primeiros a experimentar!
+            {t("betaModal.description")}
           </DialogDescription>
         </DialogHeader>
 
@@ -44,7 +46,7 @@ const BetaAccessModal = ({ open, onOpenChange }: BetaAccessModalProps) => {
                 <Sparkles className="w-4 h-4 text-tennis-green" />
               </div>
               <span className="text-muted-foreground">
-                Acesso antecipado a todas as funcionalidades
+                {t("betaModal.benefits.earlyAccess")}
               </span>
             </div>
             <div className="flex items-center gap-3 text-sm">
@@ -52,7 +54,7 @@ const BetaAccessModal = ({ open, onOpenChange }: BetaAccessModalProps) => {
                 <Users className="w-4 h-4 text-tennis-green" />
               </div>
               <span className="text-muted-foreground">
-                Faça parte da comunidade de testadores
+                {t("betaModal.benefits.community")}
               </span>
             </div>
             <div className="flex items-center gap-3 text-sm">
@@ -60,7 +62,7 @@ const BetaAccessModal = ({ open, onOpenChange }: BetaAccessModalProps) => {
                 <TestTube className="w-4 h-4 text-tennis-green" />
               </div>
               <span className="text-muted-foreground">
-                Ajude a moldar o futuro do app
+                {t("betaModal.benefits.shape")}
               </span>
             </div>
           </div>
@@ -73,7 +75,7 @@ const BetaAccessModal = ({ open, onOpenChange }: BetaAccessModalProps) => {
             className="w-full"
             onClick={handleAccessForm}
           >
-            Solicitar Acesso
+            {t("betaModal.requestAccess")}
             <ExternalLink className="w-4 h-4 ml-2" />
           </Button>
           <Button 
@@ -82,7 +84,7 @@ const BetaAccessModal = ({ open, onOpenChange }: BetaAccessModalProps) => {
             className="w-full text-muted-foreground"
             onClick={() => onOpenChange(false)}
           >
-            Fechar
+            {t("betaModal.close")}
           </Button>
         </div>
       </DialogContent>

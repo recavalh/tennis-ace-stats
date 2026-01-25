@@ -1,31 +1,34 @@
-import { Check, Watch, Brain, TrendingUp, Infinity } from "lucide-react";
-
-const features = [
-  {
-    icon: Infinity,
-    title: "Registro Ilimitado",
-    description: "Nunca paramos seu jogo. Registre quantas partidas quiser, para sempre.",
-  },
-  {
-    icon: Watch,
-    title: "Integração Wear OS",
-    description: "Marque pontos direto do pulso sem tocar no celular. Foco total no jogo.",
-  },
-  {
-    icon: Brain,
-    title: "Métricas de Ouro",
-    description: "Hold %, Break Points Convertidos, Consistência e muito mais com o Pro.",
-    isPro: true,
-  },
-  {
-    icon: TrendingUp,
-    title: "Evolução Visual",
-    description: "Gráficos que mostram se seu saque está melhorando ou piorando ao longo do tempo.",
-    isPro: true,
-  },
-];
+import { useTranslation } from "react-i18next";
+import { Watch, Brain, TrendingUp, Infinity } from "lucide-react";
 
 const FeatureShowcase = () => {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: Infinity,
+      titleKey: "platform.featureShowcase.items.unlimited.title",
+      descriptionKey: "platform.featureShowcase.items.unlimited.description",
+    },
+    {
+      icon: Watch,
+      titleKey: "platform.featureShowcase.items.wearos.title",
+      descriptionKey: "platform.featureShowcase.items.wearos.description",
+    },
+    {
+      icon: Brain,
+      titleKey: "platform.featureShowcase.items.metrics.title",
+      descriptionKey: "platform.featureShowcase.items.metrics.description",
+      isPro: true,
+    },
+    {
+      icon: TrendingUp,
+      titleKey: "platform.featureShowcase.items.evolution.title",
+      descriptionKey: "platform.featureShowcase.items.evolution.description",
+      isPro: true,
+    },
+  ];
+
   return (
     <section className="py-24 px-4 relative overflow-hidden">
       {/* Background glow */}
@@ -35,11 +38,8 @@ const FeatureShowcase = () => {
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Muito mais que um <span className="text-gradient-green">placar</span>.
+            {t("platform.featureShowcase.title")} <span className="text-gradient-green">{t("platform.featureShowcase.titleHighlight")}</span>.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Uma plataforma completa de performance para elevar seu jogo a outro nível.
-          </p>
         </div>
 
         {/* Feature showcase layout */}
@@ -50,7 +50,7 @@ const FeatureShowcase = () => {
               {/* Mini chart mockup */}
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h4 className="font-semibold text-foreground">Evolução - Últimos 3 meses</h4>
+                  <h4 className="font-semibold text-foreground">Evolution - Last 3 months</h4>
                   <span className="text-tennis-green text-sm font-medium">+12%</span>
                 </div>
                 <div className="h-32 flex items-end gap-2">
@@ -64,7 +64,7 @@ const FeatureShowcase = () => {
                 </div>
                 <div className="flex justify-between mt-2 text-xs text-muted-foreground">
                   <span>Jan</span>
-                  <span>Fev</span>
+                  <span>Feb</span>
                   <span>Mar</span>
                 </div>
               </div>
@@ -73,15 +73,15 @@ const FeatureShowcase = () => {
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center p-3 bg-secondary/50 rounded-lg">
                   <p className="text-xl font-display font-bold text-tennis-green">23</p>
-                  <p className="text-xs text-muted-foreground">Partidas</p>
+                  <p className="text-xs text-muted-foreground">Matches</p>
                 </div>
                 <div className="text-center p-3 bg-secondary/50 rounded-lg">
                   <p className="text-xl font-display font-bold text-tennis-blue">15</p>
-                  <p className="text-xs text-muted-foreground">Vitórias</p>
+                  <p className="text-xs text-muted-foreground">Wins</p>
                 </div>
                 <div className="text-center p-3 bg-secondary/50 rounded-lg">
                   <p className="text-xl font-display font-bold text-yellow-400">4.2</p>
-                  <p className="text-xs text-muted-foreground">Nível</p>
+                  <p className="text-xs text-muted-foreground">Level</p>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@ const FeatureShowcase = () => {
           <div className="space-y-6 order-1 lg:order-2">
             {features.map((feature) => (
               <div
-                key={feature.title}
+                key={feature.titleKey}
                 className="flex gap-4 p-4 rounded-xl hover:bg-secondary/30 transition-colors"
               >
                 <div className="w-12 h-12 rounded-xl bg-tennis-green/10 flex items-center justify-center flex-shrink-0">
@@ -100,7 +100,7 @@ const FeatureShowcase = () => {
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <h3 className="font-display font-bold text-foreground">
-                      {feature.title}
+                      {t(feature.titleKey)}
                     </h3>
                     {feature.isPro && (
                       <span className="px-2 py-0.5 rounded-full bg-tennis-green/20 text-tennis-green text-xs font-medium">
@@ -109,7 +109,7 @@ const FeatureShowcase = () => {
                     )}
                   </div>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {feature.description}
+                    {t(feature.descriptionKey)}
                   </p>
                 </div>
               </div>

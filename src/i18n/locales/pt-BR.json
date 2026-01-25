@@ -1,0 +1,254 @@
+{
+  "nav": {
+    "features": "Recursos",
+    "app": "App",
+    "howItWorks": "Como Funciona",
+    "download": "Download"
+  },
+  "hero": {
+    "badge": "Exclusivo para WearOS",
+    "subtitle": "Wearable Tennis Performance",
+    "description": "Registre cada ponto, analise suas estatísticas e evolua seu jogo. Direto do seu smartwatch Android.",
+    "downloadBtn": "Baixar na Play Store",
+    "statsBtn": "Ver Estatísticas"
+  },
+  "features": {
+    "title": "Recursos",
+    "titleHighlight": "Poderosos",
+    "subtitle": "Tudo que você precisa para elevar seu jogo de tênis ao próximo nível",
+    "items": {
+      "wristControl": {
+        "title": "Controle no Pulso",
+        "description": "Registre winners, erros forçados e não forçados diretamente do seu smartwatch durante a partida."
+      },
+      "pointDetails": {
+        "title": "Detalhes de Cada Ponto",
+        "description": "Categorize seus pontos: baseline, volley, smash ou return winner. Saiba exatamente onde você brilha."
+      },
+      "detailedStats": {
+        "title": "Estatísticas Detalhadas",
+        "description": "Games no serviço, pontos na recepção, break points, deuces e muito mais em tempo real."
+      },
+      "evolutionAnalysis": {
+        "title": "Análise de Evolução",
+        "description": "Acompanhe seu progresso ao longo do tempo e identifique padrões no seu jogo."
+      },
+      "intuitiveInterface": {
+        "title": "Interface Intuitiva",
+        "description": "Modo simples (2 botões) ou avançado (6 botões). Escolha o que melhor se adapta ao seu estilo."
+      },
+      "webSync": {
+        "title": "Sincronização Web",
+        "description": "Exporte seus dados para análise completa na plataforma web. Visualize gráficos e relatórios."
+      }
+    }
+  },
+  "watchShowcase": {
+    "title": "Feito para o",
+    "titleHighlight": "seu Pulso",
+    "subtitle": "Interface otimizada para smartwatches Android com WearOS",
+    "items": {
+      "quickSetup": {
+        "title": "Configuração Rápida",
+        "description": "Configure sets, games e tie-break em segundos"
+      },
+      "matchControl": {
+        "title": "Controle da Partida",
+        "description": "Registre cada ponto com facilidade"
+      },
+      "completeStats": {
+        "title": "Estatísticas Completas",
+        "description": "Acompanhe seu desempenho em tempo real"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Como",
+    "titleHighlight": "Funciona",
+    "subtitle": "Simples de usar, poderoso nos resultados",
+    "steps": {
+      "install": {
+        "title": "Instale o App",
+        "description": "Baixe o tennis.wear da Google Play Store no seu smartwatch WearOS."
+      },
+      "start": {
+        "title": "Inicie a Partida",
+        "description": "Configure o formato do jogo e comece a registrar cada ponto."
+      },
+      "sync": {
+        "title": "Sincronize os Dados",
+        "description": "Exporte suas partidas para a plataforma Ace-Stats na web."
+      },
+      "analyze": {
+        "title": "Analise e Evolua",
+        "description": "Visualize seus padrões de jogo e identifique pontos de melhoria."
+      }
+    }
+  },
+  "cta": {
+    "title": "Pronto para",
+    "titleHighlight": "Elevar seu Jogo",
+    "description": "Junte-se aos tenistas que já estão usando dados para melhorar sua performance. Comece gratuitamente hoje.",
+    "downloadBtn": "Baixar na Play Store",
+    "platformBtn": "Acessar Plataforma Web",
+    "stats": {
+      "matches": "Partidas Registradas",
+      "points": "Pontos Analisados",
+      "players": "Jogadores Ativos"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Ace-Stats. Todos os direitos reservados."
+  },
+  "betaModal": {
+    "title": "Beta Fechado",
+    "description": "O Ace-Stats está em fase de testes internos. Solicite acesso para ser um dos primeiros a experimentar!",
+    "benefits": {
+      "earlyAccess": "Acesso antecipado a todas as funcionalidades",
+      "community": "Faça parte da comunidade de testadores",
+      "shape": "Ajude a moldar o futuro do app"
+    },
+    "requestAccess": "Solicitar Acesso",
+    "close": "Fechar"
+  },
+  "platform": {
+    "hero": {
+      "title1": "Pare de",
+      "titleHighlight1": "Achar",
+      "title2": "Comece a",
+      "titleHighlight2": "Saber",
+      "subtitle": "O tracking definitivo para tenistas que querem evoluir.",
+      "subtitleHighlight": "Registre partidas ilimitadas de graça.",
+      "subtitleEnd": "Desbloqueie a inteligência de um coach com o",
+      "startFree": "Começar Grátis Agora",
+      "viewDemo": "Ver Demo do Pro",
+      "trustBadges": {
+        "noCard": "Sem cartão de crédito",
+        "quickSetup": "Setup em 2 minutos",
+        "cancelAnytime": "Cancele quando quiser"
+      },
+      "mockUser": {
+        "level": "Nível 4.0",
+        "matches": "partidas"
+      }
+    },
+    "problem": {
+      "title": "Você joga bem, mas não sabe por que perdeu?",
+      "items": {
+        "notebook": {
+          "title": "Adeus caderninho.",
+          "description": "Chega de anotações manuais que não geram dados reais."
+        },
+        "mind": {
+          "title": "Entenda sua mente.",
+          "description": "Descubra seu 'Fator Clutch' e como você reage sob pressão."
+        },
+        "rivals": {
+          "title": "Vença seus rivais.",
+          "description": "Histórico detalhado contra cada adversário para saber exatamente como ganhar."
+        }
+      }
+    },
+    "featureShowcase": {
+      "title": "Muito mais que um",
+      "titleHighlight": "placar",
+      "items": {
+        "unlimited": {
+          "title": "Registro Ilimitado",
+          "description": "Nunca paramos seu jogo. Registre quantas partidas quiser."
+        },
+        "wearos": {
+          "title": "Integração Wear OS",
+          "description": "Marque pontos direto do pulso sem tocar no celular."
+        },
+        "metrics": {
+          "title": "Métricas de Ouro (Pro)",
+          "description": "Hold %, Break Points Convertidos, Consistência."
+        },
+        "evolution": {
+          "title": "Evolução",
+          "description": "Gráficos que mostram se seu saque está melhorando ou piorando."
+        }
+      }
+    },
+    "acePro": {
+      "title": "Ace Pro:",
+      "titleHighlight": "Seu Técnico Digital",
+      "description": "Dados sem análise são apenas números. O Ace Pro transforma números em estratégia.",
+      "free": {
+        "label": "Free",
+        "subtitle": "Seus dados brutos"
+      },
+      "pro": {
+        "label": "Pro",
+        "subtitle": "Insights que vencem"
+      }
+    },
+    "pricing": {
+      "title": "Escolha seu",
+      "titleHighlight": "plano",
+      "subtitle": "Comece grátis e evolua quando estiver pronto. Sem compromisso.",
+      "popular": "Mais Popular",
+      "free": {
+        "name": "Free",
+        "subtitle": "O Hábito",
+        "price": "R$ 0",
+        "period": "/ mês",
+        "description": "Para quem quer registrar tudo.",
+        "cta": "Começar Grátis"
+      },
+      "pro": {
+        "name": "Ace Pro",
+        "subtitle": "A Evolução",
+        "price": "R$ 19,90",
+        "period": "/ mês",
+        "priceNote": "Preço de um grip",
+        "description": "Para quem quer vencer mais.",
+        "cta": "Assinar Ace Pro"
+      },
+      "features": {
+        "unlimitedMatches": "Partidas Ilimitadas",
+        "unlimitedRivals": "Adversários Ilimitados",
+        "basicStats": "Stats Básicas do Jogo",
+        "evolutionAnalysis": "Análise de Evolução",
+        "rivalFilters": "Filtros de Rivais",
+        "aiInsights": "Insights de IA",
+        "allFree": "Tudo do Free",
+        "rivalryMode": "Rivalry Mode (Filtro de Adversários)",
+        "goldMetrics": "Métricas de Ouro (Clutch, Hold%)",
+        "trendGraphs": "Gráficos de Tendência",
+        "autoInsights": "Insights Automáticos de IA",
+        "prioritySupport": "Suporte Prioritário"
+      }
+    },
+    "faq": {
+      "title": "Perguntas",
+      "titleHighlight": "Frequentes",
+      "items": {
+        "watches": {
+          "question": "Funciona em qual relógio?",
+          "answer": "O Ace-Stats funciona em qualquer smartwatch com WearOS 2.0 ou superior, incluindo Samsung Galaxy Watch 4/5/6, Google Pixel Watch, TicWatch e outros dispositivos compatíveis."
+        },
+        "cancel": {
+          "question": "Posso cancelar quando quiser?",
+          "answer": "Sim! O plano Ace Pro pode ser cancelado a qualquer momento, sem taxas ou multas. Você continuará tendo acesso até o fim do período pago."
+        },
+        "freeForever": {
+          "question": "O plano Free é realmente gratuito para sempre?",
+          "answer": "Sim, absolutamente! O plano Free permite registro ilimitado de partidas e adversários para sempre. Sem truques, sem limitações temporárias."
+        },
+        "dataSync": {
+          "question": "Como funciona a sincronização de dados?",
+          "answer": "Após cada partida, você pode exportar os dados do relógio para a plataforma web via Bluetooth ou Wi-Fi. A sincronização leva apenas alguns segundos."
+        }
+      }
+    },
+    "finalCta": {
+      "title": "Sua próxima vitória começa nos",
+      "titleHighlight": "dados",
+      "description": "Junte-se a centenas de tenistas que já transformaram sua forma de jogar e evoluir.",
+      "cta": "Criar Conta Grátis",
+      "trustText": "Grátis para sempre • Sem cartão de crédito • Setup em 2 minutos"
+    }
+  }
+}

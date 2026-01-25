@@ -1,10 +1,15 @@
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Watch, Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import BetaAccessModal from "@/components/BetaAccessModal";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [betaModalOpen, setBetaModalOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -22,32 +27,36 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
-                Recursos
+                {t("nav.features")}
               </a>
               <a href="#app" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
-                App
+                {t("nav.app")}
               </a>
               <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
-                Como Funciona
+                {t("nav.howItWorks")}
               </a>
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
-              <Button variant="hero" size="default">
+            {/* Right side */}
+            <div className="hidden md:flex items-center gap-3">
+              <LanguageSwitcher />
+              <Button variant="hero" size="default" onClick={() => setBetaModalOpen(true)}>
                 <Watch className="w-4 h-4 mr-2" />
-                Download
+                {t("nav.download")}
               </Button>
             </div>
 
             {/* Mobile menu button */}
-            <button
-              className="md:hidden p-2 text-foreground"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            <div className="flex items-center gap-2 md:hidden">
+              <LanguageSwitcher />
+              <button
+                className="p-2 text-foreground"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Toggle menu"
+              >
+                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
 
           {/* Mobile Navigation */}
@@ -59,31 +68,33 @@ const Navbar = () => {
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
-                  Recursos
+                  {t("nav.features")}
                 </a>
                 <a 
                   href="#app" 
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
-                  App
+                  {t("nav.app")}
                 </a>
                 <a 
                   href="#how-it-works" 
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
-                  Como Funciona
+                  {t("nav.howItWorks")}
                 </a>
-                <Button variant="hero" size="default" className="w-full mt-2">
+                <Button variant="hero" size="default" className="w-full mt-2" onClick={() => setBetaModalOpen(true)}>
                   <Watch className="w-4 h-4 mr-2" />
-                  Download
+                  {t("nav.download")}
                 </Button>
               </div>
             </div>
           )}
         </nav>
       </div>
+
+      <BetaAccessModal open={betaModalOpen} onOpenChange={setBetaModalOpen} />
     </header>
   );
 };
