@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Watch, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import BetaAccessModal from "@/components/BetaAccessModal";
 
 const HeroSection = () => {
+  const [betaModalOpen, setBetaModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-24 overflow-hidden">
       {/* Background glow effects */}
@@ -46,7 +50,7 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up animate-delay-500">
-          <Button variant="hero" size="xl" className="w-full sm:w-auto">
+          <Button variant="hero" size="xl" className="w-full sm:w-auto" onClick={() => setBetaModalOpen(true)}>
             <Watch className="w-5 h-5 mr-2" />
             Baixar na Play Store
           </Button>
@@ -63,6 +67,9 @@ const HeroSection = () => {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <ChevronDown className="w-8 h-8 text-muted-foreground" />
       </div>
+
+      {/* Beta Access Modal */}
+      <BetaAccessModal open={betaModalOpen} onOpenChange={setBetaModalOpen} />
     </section>
   );
 };

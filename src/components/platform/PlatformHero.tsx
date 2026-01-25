@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import { Link } from "react-router-dom";
+import BetaAccessModal from "@/components/BetaAccessModal";
 
 const PlatformHero = () => {
+  const [betaModalOpen, setBetaModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-24 overflow-hidden">
       {/* Background glow effects */}
@@ -31,11 +34,11 @@ const PlatformHero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up animate-delay-300">
-          <Button variant="hero" size="xl" className="w-full sm:w-auto group">
+          <Button variant="hero" size="xl" className="w-full sm:w-auto group" onClick={() => setBetaModalOpen(true)}>
             Começar Grátis Agora
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
+          <Button variant="heroOutline" size="xl" className="w-full sm:w-auto" onClick={() => setBetaModalOpen(true)}>
             <Play className="w-5 h-5 mr-2" />
             Ver Demo do Pro
           </Button>
@@ -88,6 +91,9 @@ const PlatformHero = () => {
           </div>
         </div>
       </div>
+
+      {/* Beta Access Modal */}
+      <BetaAccessModal open={betaModalOpen} onOpenChange={setBetaModalOpen} />
     </section>
   );
 };

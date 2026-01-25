@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, X, Sparkles } from "lucide-react";
+import BetaAccessModal from "@/components/BetaAccessModal";
 
 const plans = [
   {
@@ -40,6 +42,8 @@ const plans = [
 ];
 
 const PricingSection = () => {
+  const [betaModalOpen, setBetaModalOpen] = useState(false);
+
   return (
     <section className="py-24 px-4 relative">
       <div className="max-w-5xl mx-auto relative z-10">
@@ -122,6 +126,7 @@ const PricingSection = () => {
                 variant={plan.highlighted ? "hero" : "heroOutline"}
                 size="lg"
                 className="w-full"
+                onClick={() => setBetaModalOpen(true)}
               >
                 {plan.cta}
               </Button>
@@ -129,6 +134,9 @@ const PricingSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Beta Access Modal */}
+      <BetaAccessModal open={betaModalOpen} onOpenChange={setBetaModalOpen} />
     </section>
   );
 };

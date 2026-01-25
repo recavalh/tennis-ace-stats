@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap } from "lucide-react";
+import BetaAccessModal from "@/components/BetaAccessModal";
 
 const FinalCTA = () => {
+  const [betaModalOpen, setBetaModalOpen] = useState(false);
+
   return (
     <section className="py-24 px-4 relative overflow-hidden">
       {/* Background glows */}
@@ -23,7 +27,7 @@ const FinalCTA = () => {
         </p>
 
         {/* CTA Button */}
-        <Button variant="hero" size="xl" className="group">
+        <Button variant="hero" size="xl" className="group" onClick={() => setBetaModalOpen(true)}>
           Criar Conta Grátis
           <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
         </Button>
@@ -33,6 +37,9 @@ const FinalCTA = () => {
           Grátis para sempre • Sem cartão de crédito • Setup em 2 minutos
         </p>
       </div>
+
+      {/* Beta Access Modal */}
+      <BetaAccessModal open={betaModalOpen} onOpenChange={setBetaModalOpen} />
     </section>
   );
 };
