@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -19,15 +20,15 @@ const Footer = () => {
 
           {/* Links */}
           <nav className="flex items-center gap-8">
-            <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            <Link to="/#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t("nav.features")}
-            </a>
-            <a href="#app" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            </Link>
+            <Link to="/#app" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t("nav.app")}
-            </a>
-            <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            </Link>
+            <Link to="/#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t("nav.howItWorks")}
-            </a>
+            </Link>
           </nav>
 
           {/* Copyright */}

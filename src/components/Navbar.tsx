@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Watch, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import BetaAccessModal from "@/components/BetaAccessModal";
@@ -17,24 +18,24 @@ const Navbar = () => {
         <nav className="glass-card rounded-2xl px-4 md:px-6 py-3 max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <img src={logo} alt="Ace-Stats" className="w-10 h-10 rounded-lg" />
               <span className="font-display text-xl font-bold text-foreground hidden sm:inline">
                 Ace-Stats
               </span>
-            </a>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+              <Link to="/#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
                 {t("nav.features")}
-              </a>
-              <a href="#app" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+              </Link>
+              <Link to="/#app" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
                 {t("nav.app")}
-              </a>
-              <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+              </Link>
+              <Link to="/#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
                 {t("nav.howItWorks")}
-              </a>
+              </Link>
             </div>
 
             {/* Right side */}
@@ -63,27 +64,27 @@ const Navbar = () => {
           {isOpen && (
             <div className="md:hidden pt-4 pb-2 border-t border-border/30 mt-3">
               <div className="flex flex-col gap-4">
-                <a 
-                  href="#features" 
+                <Link 
+                  to="/#features" 
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {t("nav.features")}
-                </a>
-                <a 
-                  href="#app" 
+                </Link>
+                <Link 
+                  to="/#app" 
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {t("nav.app")}
-                </a>
-                <a 
-                  href="#how-it-works" 
+                </Link>
+                <Link 
+                  to="/#how-it-works" 
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {t("nav.howItWorks")}
-                </a>
+                </Link>
                 <Button variant="hero" size="default" className="w-full mt-2" onClick={() => setBetaModalOpen(true)}>
                   <Watch className="w-4 h-4 mr-2" />
                   {t("nav.download")}
