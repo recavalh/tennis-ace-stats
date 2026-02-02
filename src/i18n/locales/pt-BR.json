@@ -3,7 +3,8 @@
     "features": "Recursos",
     "app": "App",
     "howItWorks": "Como Funciona",
-    "download": "Download"
+    "download": "Download",
+    "privacy": "Política de Privacidade"
   },
   "hero": {
     "badge": "Exclusivo para WearOS",
@@ -99,6 +100,18 @@
   },
   "footer": {
     "copyright": "© 2026 Ace-Stats. Todos os direitos reservados."
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "metaDescription": "Saiba como o Ace-Stats trata seus dados e protege sua privacidade.",
+    "paragraph1": "Este aplicativo não coleta, armazena nem transmite dados pessoais do usuário para servidores externos ou terceiros.",
+    "paragraph2": "Todos os dados gerados pelo aplicativo, como estatísticas de partidas e registros esportivos, são armazenados exclusivamente no dispositivo do usuário.",
+    "paragraph3": "O aplicativo não utiliza contas de usuário, não solicita login e não realiza qualquer tipo de rastreamento, análise de comportamento ou coleta automática de informações pessoais.",
+    "paragraph4": "O compartilhamento de dados, quando disponível, ocorre somente por iniciativa explícita do usuário, por meio das ferramentas nativas do sistema operacional (por exemplo, exportação ou compartilhamento manual de arquivos). O aplicativo não controla nem armazena essas informações após o compartilhamento.",
+    "paragraph5": "O aplicativo não exibe anúncios e não utiliza serviços de terceiros para coleta de dados.",
+    "contactTitle": "Contato",
+    "contactText": "Caso o usuário tenha dúvidas ou solicitações relacionadas à privacidade, pode entrar em contato pelo e-mail:",
+    "updates": "Esta política pode ser atualizada futuramente para refletir melhorias ou mudanças no aplicativo."
   },
   "betaModal": {
     "title": "Beta Fechado",
