@@ -1,8 +1,9 @@
-{
+﻿{
   "nav": {
     "features": "Recursos",
     "app": "App",
     "howItWorks": "Como Funciona",
+    "watch": "Telas",
     "download": "Download",
     "privacy": "Política de Privacidade"
   },
@@ -263,5 +264,354 @@
       "cta": "Criar Conta Grátis",
       "trustText": "Grátis para sempre • Sem cartão de crédito • Setup em 2 minutos"
     }
-  }
-}
+  },
+  "watchPage": {
+    "meta": {
+      "title": "Funcionalidades do Relógio | Ace-Stats",
+      "description": "Conheça todas as funcionalidades do relógio no Ace-Stats: setup rápido, regras avançadas, modos simples e avançado, histórico e estatísticas completas."
+    },
+    "hero": {
+      "badge": "Ace-Stats no Pulso",
+      "title": "Funcionalidades do Relógio",
+      "subtitle": "Uma visão completa de como o Ace-Stats transforma o seu smartwatch em um centro de controle de partidas. Rápido para configurar, preciso para medir."
+    },
+    "matchSetup": {
+      "title": "Configuração de Partida (Match Setup)",
+      "intro": "A tela inicial do Ace-Stats foi desenhada para ser rápida. No tênis, cada segundo de descanso conta, então você define as regras do jogo em menos de 5 segundos.",
+      "cards": {
+        "structure": {
+          "title": "1. Estrutura do Jogo",
+          "items": {
+            "bestOfSets": {
+              "label": "Best of Sets:",
+              "text": "Escolha entre 1, 3 ou 5 sets."
+            },
+            "gamesPerSet": {
+              "label": "Games per Set:",
+              "text": "Defina a duração de cada set (4, 6 ou 8 games)."
+            },
+            "superTieBreak": {
+              "label": "Modo Super Tie-break:",
+              "text": "Ao selecionar 1 Set de 4 Games, o app entra automaticamente no modo Short Set / Super Tie-break."
+            }
+          }
+        },
+        "rules": {
+          "title": "2. Regras e Preferências",
+          "items": {
+            "enableTieBreak": {
+              "label": "Enable Tie-break:",
+              "text": "Ative ou desative a disputa caso o set chegue ao empate regulamentar."
+            },
+            "iServeFirst": {
+              "label": "I Serve First:",
+              "text": "Define quem começa no saque para manter a alternância correta desde o primeiro ponto."
+            }
+          }
+        },
+        "quickNav": {
+          "title": "3. Navegação Rápida",
+          "items": {
+            "settings": {
+              "label": "Settings:",
+              "text": "Ajustes finos do aplicativo."
+            },
+            "start": {
+              "label": "Start:",
+              "text": "Início imediato da coleta de dados."
+            },
+            "history": {
+              "label": "History:",
+              "text": "Consulta dos últimos confrontos e evolução técnica."
+            }
+          }
+        }
+      }
+    },
+    "advancedSettings": {
+      "title": "Personalização e Regras Avançadas",
+      "intro": "O Ace-Stats se adapta ao seu nível de jogo e ao nível de detalhe das suas estatísticas. No menu de configurações, você tem controle total sobre a interface e as regras da partida.",
+      "cards": {
+        "uiMode": {
+          "title": "1. Interface de Usuário (UI Mode)",
+          "items": {
+            "simple": {
+              "label": "Simple Mode (2 botões):",
+              "text": "Marque quem ganhou o ponto e deixe o relógio cuidar do placar."
+            },
+            "advanced": {
+              "label": "Advanced Mode (6 botões):",
+              "text": "Registre Winners, Erros Não Forçados, Aces e Duplas Faltas."
+            }
+          }
+        },
+        "scoring": {
+          "title": "2. Sistema de Pontuação (Scoring)",
+          "items": {
+            "deuce": {
+              "label": "Deuce (Ad):",
+              "text": "Formato tradicional com dois pontos de vantagem."
+            },
+            "noAd": {
+              "label": "No-Ad:",
+              "text": "Ponto decisivo em 40-40."
+            }
+          }
+        },
+        "tieBreaks": {
+          "title": "3. Dinâmica de Tie-breaks",
+          "items": {
+            "setTieBreak": {
+              "label": "Set Tie-break Points:",
+              "text": "Defina se o tie-break do set será de 5, 7 ou 10 pontos."
+            },
+            "finalSet": {
+              "label": "Final Set (Decisão):",
+              "text": "Escolha set completo ou Match Tie-break para decidir o jogo."
+            },
+            "matchTieBreak": {
+              "label": "Match Tie-break Points:",
+              "text": "Configure a meta de pontos (ex: 7 ou 10)."
+            }
+          }
+        },
+        "precision": {
+          "title": "4. Precisão Técnica",
+          "items": {
+            "trackFirstServe": {
+              "label": "Track First Serve:",
+              "text": "Registre se o ponto veio do primeiro ou segundo serviço."
+            },
+            "setFormat": {
+              "label": "Formato do Set:",
+              "text": "Full Set com tie-break no alvo definido ou Short Set com tie-break antecipado."
+            }
+          }
+        }
+      }
+    },
+    "history": {
+      "title": "Histórico e Evolução",
+      "intro": "Não basta jogar; é preciso analisar. Na tela de Last Matches, o Ace-Stats mantém o registro das suas últimas 3 partidas para consulta imediata.",
+      "items": {
+        "detail": {
+          "label": "Detalhamento:",
+          "text": "Veja data, hora e placar final de cada confronto."
+        },
+        "share": {
+          "label": "Compartilhamento:",
+          "text": "Cada partida gera um link exclusivo para enviar estatísticas."
+        },
+        "clean": {
+          "label": "Gestão de Dados:",
+          "text": "Use o botão Clean para limpar o histórico."
+        }
+      }
+    },
+    "interface": {
+      "title": "Interface de Jogo: Controle Total no Pulso",
+      "intro": "O Ace-Stats foi projetado para você não perder o foco na bola. A interface é intuitiva e permite registrar pontos sem precisar olhar fixamente para o relógio.",
+      "cards": {
+        "simple": {
+          "title": "1. Modo Simples: Agilidade Máxima",
+          "items": {
+            "opponentPoint": {
+              "label": "Ponto do Oponente:",
+              "text": "Toque na metade superior da tela."
+            },
+            "yourPoint": {
+              "label": "Seu Ponto:",
+              "text": "Toque na metade inferior da tela."
+            },
+            "serveGuide": {
+              "label": "Guia de Saque:",
+              "text": "Indica o sacador e a posição correta em quadra (Deuce ou Ad)."
+            }
+          }
+        },
+        "errors": {
+          "title": "2. Gestão de Erros e Pausa",
+          "items": {
+            "undo": {
+              "label": "Botão Desfazer (Undo):",
+              "text": "Corrige o último ponto marcado instantaneamente."
+            },
+            "pauseMenu": {
+              "label": "Menu de Pausa:",
+              "text": "Pressione e segure o centro por 2 segundos."
+            }
+          }
+        }
+      },
+      "imageLabels": {
+        "simpleMode": "Simple Mode",
+        "pauseMenu": "Menu de Pausa"
+      },
+      "pauseCommands": {
+        "title": "3. Comandos do Menu de Pausa",
+        "items": {
+          "resume": {
+            "label": "Resume:",
+            "text": "Volta para a partida de onde parou."
+          },
+          "stats": {
+            "label": "Stats:",
+            "text": "Visualiza as estatísticas em tempo real."
+          },
+          "history": {
+            "label": "History:",
+            "text": "Consulta o histórico de pontos da partida atual."
+          },
+          "finish": {
+            "label": "Finish Match:",
+            "text": "Encerra o confronto e salva os dados finais."
+          },
+          "restart": {
+            "label": "Restart:",
+            "text": "Reinicia a partida ou volta para a tela inicial de configurações."
+          }
+        }
+      },
+      "matchStats": {
+        "title": "4. Estatísticas da Partida",
+        "text": "Saiba como está indo seu jogo com métricas de break points, porcentagem de primeiro serviço, erros e winners. Ajuste sua estratégia ponto a ponto."
+      }
+    },
+    "advancedMode": {
+      "title": "Modo Avançado: Estatísticas de Nível Profissional",
+      "intro": "Para quem não quer apenas marcar o placar, mas entender como o jogo foi vencido ou perdido. O modo avançado (6 botões) transforma o relógio em um scout completo.",
+      "cards": {
+        "serve": {
+          "title": "1. Gestão Inteligente de Saque",
+          "items": {
+            "aces": {
+              "label": "Aces e Duplas Faltas:",
+              "text": "Controle a eficiência do serviço no lado direito."
+            },
+            "serveControl": {
+              "label": "1º e 2º Saque:",
+              "text": "O botão Serve F alterna para D. Fault e muda de cor."
+            },
+            "orientation": {
+              "label": "Orientação Visual:",
+              "text": "Ícone do sacador indica o lado correto (Deuce ou Ad)."
+            }
+          }
+        },
+        "errors": {
+          "title": "2. Anatomia do Erro",
+          "items": {
+            "unforced": {
+              "label": "Unforced Error:",
+              "text": "Aquela bola que você não poderia ter perdido."
+            },
+            "forced": {
+              "label": "Forced Error:",
+              "text": "Mérito da pressão do adversário."
+            },
+            "return": {
+              "label": "Return Error:",
+              "text": "Falha especificamente no retorno do saque."
+            }
+          }
+        }
+      },
+      "winners": {
+        "title": "3. Galeria de Winners",
+        "items": {
+          "baseline": {
+            "label": "Baseline:",
+            "text": "Winners de forehand ou backhand durante o rali."
+          },
+          "volley": {
+            "label": "Volley:",
+            "text": "Domínio da rede."
+          },
+          "smash": {
+            "label": "Smash:",
+            "text": "Finalizações por cima da cabeça."
+          },
+          "returnWinner": {
+            "label": "Return Winner:",
+            "text": "Devolução que define o ponto."
+          }
+        }
+      }
+    },
+    "images": {
+      "menu1": {
+        "alt": "Tela inicial com Settings, Start e History",
+        "caption": "Acesso imediato à navegação principal."
+      },
+      "menu2": {
+        "alt": "Menu de ações da partida",
+        "caption": "Comandos rápidos para controlar o jogo."
+      },
+      "settings2": {
+        "alt": "Tela de configurações avançadas",
+        "caption": "UI Mode e regras gerais."
+      },
+      "settings3": {
+        "alt": "Tela de scoring e tie-break",
+        "caption": "Ajustes de scoring e set tie-break points."
+      },
+      "settings4": {
+        "alt": "Tela de track first serve e set format",
+        "caption": "Track First Serve e formato do set."
+      },
+      "history": {
+        "alt": "Tela de últimas partidas",
+        "caption": "Últimas partidas e botão Clean."
+      },
+      "matchHistory": {
+        "alt": "Histórico ponto a ponto",
+        "caption": "Histórico detalhado da partida atual."
+      },
+      "ui2": {
+        "alt": "Interface simples com dois botões",
+        "caption": "Simple Mode com foco total no jogo."
+      },
+      "pause1": {
+        "alt": "Menu de pausa com resume, stats e history",
+        "caption": "Menu de pausa com acesso rápido."
+      },
+      "pause2": {
+        "alt": "Menu de pausa com finish match e restart",
+        "caption": "Finalizar ou reiniciar a partida."
+      },
+      "ui6_1": {
+        "alt": "Interface avançada com seis botões",
+        "caption": "Controle total de winners e saque."
+      },
+      "ui6_2": {
+        "alt": "Interface avançada com double fault",
+        "caption": "Registro rápido de double fault."
+      },
+      "ui6_3": {
+        "alt": "Interface avançada com serve F",
+        "caption": "Controle do primeiro saque."
+      },
+      "errors1": {
+        "alt": "Detalhe de erro com unforced, forced e unreturn",
+        "caption": "Classificação completa dos erros."
+      },
+      "errors2": {
+        "alt": "Detalhe de erro com unforced e forced",
+        "caption": "Erros forçados e não forçados."
+      },
+      "winners1": {
+        "alt": "Detalhe de winners com baseline e volley",
+        "caption": "Winners por tipo de golpe."
+      },
+      "winners2": {
+        "alt": "Detalhe de winners com smash e return",
+        "caption": "Smash e return winner em destaque."
+      },
+      "matchStats": {
+        "alt": "Tela de estatísticas da partida",
+        "caption": "Estatísticas em tempo real para ajustar sua estratégia."
+      }
+    }
+  }}
+
+

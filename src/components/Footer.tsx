@@ -29,6 +29,9 @@ const Footer = () => {
             <Link to="/#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t("nav.howItWorks")}
             </Link>
+            <Link to="/watch" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+              {t("nav.watch")}
+            </Link>
             <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t("nav.privacy")}
             </Link>

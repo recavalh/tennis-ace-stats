@@ -1,8 +1,9 @@
-{
+﻿{
   "nav": {
     "features": "Features",
     "app": "App",
     "howItWorks": "How It Works",
+    "watch": "Screens",
     "download": "Download",
     "privacy": "Privacy Policy"
   },
@@ -263,5 +264,354 @@
       "cta": "Create Free Account",
       "trustText": "Free forever • No credit card • Setup in 2 minutes"
     }
-  }
-}
+  },
+  "watchPage": {
+    "meta": {
+      "title": "Watch Screens | Ace-Stats",
+      "description": "Explore all watch features in Ace-Stats: quick setup, advanced rules, simple and advanced modes, history, and full match statistics."
+    },
+    "hero": {
+      "badge": "Ace-Stats on Your Wrist",
+      "title": "Watch Screens & Features",
+      "subtitle": "A complete view of how Ace-Stats turns your smartwatch into a match control center. Fast to set up, precise to measure."
+    },
+    "matchSetup": {
+      "title": "Match Setup",
+      "intro": "The Ace-Stats home screen is built for speed. In tennis, every rest second matters, so you set the rules in under 5 seconds.",
+      "cards": {
+        "structure": {
+          "title": "1. Game Structure",
+          "items": {
+            "bestOfSets": {
+              "label": "Best of Sets:",
+              "text": "Choose between 1, 3, or 5 sets."
+            },
+            "gamesPerSet": {
+              "label": "Games per Set:",
+              "text": "Define the length of each set (4, 6, or 8 games)."
+            },
+            "superTieBreak": {
+              "label": "Super Tie-break Mode:",
+              "text": "Selecting 1 set of 4 games automatically switches to Short Set / Super Tie-break mode."
+            }
+          }
+        },
+        "rules": {
+          "title": "2. Rules & Preferences",
+          "items": {
+            "enableTieBreak": {
+              "label": "Enable Tie-break:",
+              "text": "Enable or disable the tie-break if the set reaches a regulation tie."
+            },
+            "iServeFirst": {
+              "label": "I Serve First:",
+              "text": "Defines who serves first to keep service rotation accurate from point one."
+            }
+          }
+        },
+        "quickNav": {
+          "title": "3. Quick Navigation",
+          "items": {
+            "settings": {
+              "label": "Settings:",
+              "text": "Fine-tune the app."
+            },
+            "start": {
+              "label": "Start:",
+              "text": "Start tracking immediately."
+            },
+            "history": {
+              "label": "History:",
+              "text": "Review recent matches and technical evolution."
+            }
+          }
+        }
+      }
+    },
+    "advancedSettings": {
+      "title": "Customization & Advanced Rules",
+      "intro": "Ace-Stats adapts to your level and the detail you want. In settings, you control the interface and match rules.",
+      "cards": {
+        "uiMode": {
+          "title": "1. User Interface (UI Mode)",
+          "items": {
+            "simple": {
+              "label": "Simple Mode (2 buttons):",
+              "text": "Tap who won the point and let the watch handle the score."
+            },
+            "advanced": {
+              "label": "Advanced Mode (6 buttons):",
+              "text": "Track winners, unforced errors, aces, and double faults."
+            }
+          }
+        },
+        "scoring": {
+          "title": "2. Scoring System",
+          "items": {
+            "deuce": {
+              "label": "Deuce (Ad):",
+              "text": "Traditional format requiring two-point advantage."
+            },
+            "noAd": {
+              "label": "No-Ad:",
+              "text": "Deciding point at 40-40."
+            }
+          }
+        },
+        "tieBreaks": {
+          "title": "3. Tie-break Dynamics",
+          "items": {
+            "setTieBreak": {
+              "label": "Set Tie-break Points:",
+              "text": "Choose 5, 7, or 10 points for the set tie-break."
+            },
+            "finalSet": {
+              "label": "Final Set (Decision):",
+              "text": "Play a full set or a Match Tie-break to decide the match."
+            },
+            "matchTieBreak": {
+              "label": "Match Tie-break Points:",
+              "text": "Set the target points (e.g., 7 or 10)."
+            }
+          }
+        },
+        "precision": {
+          "title": "4. Technical Precision",
+          "items": {
+            "trackFirstServe": {
+              "label": "Track First Serve:",
+              "text": "Record whether the point came from a first or second serve."
+            },
+            "setFormat": {
+              "label": "Set Format:",
+              "text": "Full Set tie-break at target or Short Set with an earlier tie-break."
+            }
+          }
+        }
+      }
+    },
+    "history": {
+      "title": "History & Evolution",
+      "intro": "It’s not enough to play; you need to analyze. The Last Matches screen stores your last 3 matches for quick review.",
+      "items": {
+        "detail": {
+          "label": "Details:",
+          "text": "See date, time, and final score for each match."
+        },
+        "share": {
+          "label": "Sharing:",
+          "text": "Each match generates a unique link to share your stats."
+        },
+        "clean": {
+          "label": "Data Management:",
+          "text": "Use the Clean button to clear your history."
+        }
+      }
+    },
+    "interface": {
+      "title": "Game Interface: Total Control on Your Wrist",
+      "intro": "Ace-Stats is designed to keep your focus on the ball. The interface is intuitive and lets you record points without staring at the watch.",
+      "cards": {
+        "simple": {
+          "title": "1. Simple Mode: Maximum Agility",
+          "items": {
+            "opponentPoint": {
+              "label": "Opponent Point:",
+              "text": "Tap the upper half of the screen."
+            },
+            "yourPoint": {
+              "label": "Your Point:",
+              "text": "Tap the lower half of the screen."
+            },
+            "serveGuide": {
+              "label": "Serve Guide:",
+              "text": "Shows the server and the correct court side (Deuce or Ad)."
+            }
+          }
+        },
+        "errors": {
+          "title": "2. Error Management & Pause",
+          "items": {
+            "undo": {
+              "label": "Undo Button:",
+              "text": "Instantly corrects the last point."
+            },
+            "pauseMenu": {
+              "label": "Pause Menu:",
+              "text": "Press and hold the center for 2 seconds."
+            }
+          }
+        }
+      },
+      "imageLabels": {
+        "simpleMode": "Simple Mode",
+        "pauseMenu": "Pause Menu"
+      },
+      "pauseCommands": {
+        "title": "3. Pause Menu Commands",
+        "items": {
+          "resume": {
+            "label": "Resume:",
+            "text": "Return to the match right where you left off."
+          },
+          "stats": {
+            "label": "Stats:",
+            "text": "View real-time statistics."
+          },
+          "history": {
+            "label": "History:",
+            "text": "Check point history for the current match."
+          },
+          "finish": {
+            "label": "Finish Match:",
+            "text": "End the match and save the final data."
+          },
+          "restart": {
+            "label": "Restart:",
+            "text": "Restart the match or return to setup."
+          }
+        }
+      },
+      "matchStats": {
+        "title": "4. Match Statistics",
+        "text": "See how your game is going with break-point metrics, first-serve percentage, errors, and winners. Adjust your strategy point by point."
+      }
+    },
+    "advancedMode": {
+      "title": "Advanced Mode: Pro-Level Statistics",
+      "intro": "For those who want more than a score. The advanced mode (6 buttons) turns your watch into a complete tennis scout.",
+      "cards": {
+        "serve": {
+          "title": "1. Smart Serve Management",
+          "items": {
+            "aces": {
+              "label": "Aces & Double Faults:",
+              "text": "Control serve efficiency on the right side."
+            },
+            "serveControl": {
+              "label": "1st & 2nd Serve:",
+              "text": "The Serve F button toggles to D. Fault and changes color."
+            },
+            "orientation": {
+              "label": "Visual Orientation:",
+              "text": "The server icon shows the correct side (Deuce or Ad)."
+            }
+          }
+        },
+        "errors": {
+          "title": "2. Error Anatomy",
+          "items": {
+            "unforced": {
+              "label": "Unforced Error:",
+              "text": "A ball you should not have missed."
+            },
+            "forced": {
+              "label": "Forced Error:",
+              "text": "Credit to your opponent’s pressure."
+            },
+            "return": {
+              "label": "Return Error:",
+              "text": "A mistake specifically on the return."
+            }
+          }
+        }
+      },
+      "winners": {
+        "title": "3. Winners Gallery",
+        "items": {
+          "baseline": {
+            "label": "Baseline:",
+            "text": "Forehand or backhand winners during rallies."
+          },
+          "volley": {
+            "label": "Volley:",
+            "text": "Net dominance."
+          },
+          "smash": {
+            "label": "Smash:",
+            "text": "Overhead finishes."
+          },
+          "returnWinner": {
+            "label": "Return Winner:",
+            "text": "A return that ends the point."
+          }
+        }
+      }
+    },
+    "images": {
+      "menu1": {
+        "alt": "Home screen with Settings, Start and History",
+        "caption": "Immediate access to main navigation."
+      },
+      "menu2": {
+        "alt": "Match actions menu",
+        "caption": "Quick commands to control the game."
+      },
+      "settings2": {
+        "alt": "Advanced settings screen",
+        "caption": "UI mode and general rules."
+      },
+      "settings3": {
+        "alt": "Scoring and tie-break screen",
+        "caption": "Scoring adjustments and set tie-break points."
+      },
+      "settings4": {
+        "alt": "Track first serve and set format",
+        "caption": "Track First Serve and set format."
+      },
+      "history": {
+        "alt": "Last matches screen",
+        "caption": "Recent matches and Clean button."
+      },
+      "matchHistory": {
+        "alt": "Point-by-point history",
+        "caption": "Detailed history of the current match."
+      },
+      "ui2": {
+        "alt": "Simple interface with two buttons",
+        "caption": "Simple Mode focused on the game."
+      },
+      "pause1": {
+        "alt": "Pause menu with resume, stats, and history",
+        "caption": "Pause menu with quick access."
+      },
+      "pause2": {
+        "alt": "Pause menu with finish match and restart",
+        "caption": "Finish or restart the match."
+      },
+      "ui6_1": {
+        "alt": "Advanced interface with six buttons",
+        "caption": "Full control of winners and serve."
+      },
+      "ui6_2": {
+        "alt": "Advanced interface with double fault",
+        "caption": "Quick double-fault logging."
+      },
+      "ui6_3": {
+        "alt": "Advanced interface with serve F",
+        "caption": "First-serve control."
+      },
+      "errors1": {
+        "alt": "Error detail with unforced, forced, and unreturn",
+        "caption": "Complete error classification."
+      },
+      "errors2": {
+        "alt": "Error detail with unforced and forced",
+        "caption": "Forced and unforced errors."
+      },
+      "winners1": {
+        "alt": "Winner detail with baseline and volley",
+        "caption": "Winners by shot type."
+      },
+      "winners2": {
+        "alt": "Winner detail with smash and return",
+        "caption": "Smash and return winner highlights."
+      },
+      "matchStats": {
+        "alt": "Match statistics screen",
+        "caption": "Real-time stats to refine your strategy."
+      }
+    }
+  }}
+
+

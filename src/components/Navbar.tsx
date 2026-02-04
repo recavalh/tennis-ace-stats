@@ -36,6 +36,9 @@ const Navbar = () => {
               <Link to="/#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
                 {t("nav.howItWorks")}
               </Link>
+              <Link to="/watch" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+                {t("nav.watch")}
+              </Link>
             </div>
 
             {/* Right side */}
@@ -84,6 +87,13 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   {t("nav.howItWorks")}
+                </Link>
+                <Link 
+                  to="/watch" 
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t("nav.watch")}
                 </Link>
                 <Button variant="hero" size="default" className="w-full mt-2" onClick={() => setBetaModalOpen(true)}>
                   <Watch className="w-4 h-4 mr-2" />
