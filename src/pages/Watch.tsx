@@ -440,7 +440,7 @@ const Watch = () => {
                     <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
                       {t("watchPage.interface.imageLabels.simpleMode")}
                     </p>
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="flex justify-center gap-6">
                       {simpleModeImages.map((item) => (
                         <WatchImageCard key={item.src} {...item} />
                       ))}
