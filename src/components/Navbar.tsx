@@ -30,7 +30,7 @@ const Navbar = () => {
               <Link to="/#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
                 {t("nav.features")}
               </Link>
-              <Link to="/#app" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+              <Link to="/android" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
                 {t("nav.app")}
               </Link>
               <Link to="/#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
@@ -75,7 +75,7 @@ const Navbar = () => {
                   {t("nav.features")}
                 </Link>
                 <Link 
-                  to="/#app" 
+                  to="/android" 
                   className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium py-2"
                   onClick={() => setIsOpen(false)}
                 >

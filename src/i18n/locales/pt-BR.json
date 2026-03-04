@@ -1,9 +1,9 @@
 ﻿{
   "nav": {
     "features": "Recursos",
-    "app": "App",
+    "app": "App Android",
     "howItWorks": "Como Funciona",
-    "watch": "Telas",
+    "watch": "App Wear OS",
     "download": "Download",
     "privacy": "Política de Privacidade"
   },
@@ -612,6 +612,110 @@
         "caption": "Estatísticas em tempo real para ajustar sua estratégia."
       }
     }
-  }}
+  },
+  "androidPage": {
+    "meta": {
+      "title": "App Android | Ace-Stats",
+      "description": "Galeria de telas do aplicativo Android para celular, incluindo setup, pontuacao da partida e historico."
+    },
+    "hero": {
+      "badge": "Ace-Stats no Celular",
+      "title": "App Android",
+      "subtitle": "Uma pagina dedicada para agrupar as principais imagens do app para celular seguindo o mesmo padrao visual do projeto."
+    },
+    "groups": {
+      "setup": {
+        "title": "Setup e Configuracao",
+        "description": "Telas iniciais para configurar partida, regras e recebimento de dados."
+      },
+      "match": {
+        "title": "Pontuacao e Fluxo da Partida",
+        "description": "Interface durante o jogo com modos de pontuacao, pausa e classificacao de pontos."
+      },
+      "analytics": {
+        "title": "Historico e Estatisticas",
+        "description": "Acompanhamento de desempenho com historico ponto a ponto e estatisticas finais."
+      }
+    },
+    "images": {
+      "menu1": {
+        "alt": "Tela principal de setup da partida",
+        "caption": "Definicao rapida de sets, games e comandos iniciais."
+      },
+      "menu2": {
+        "alt": "Tela de acoes da partida",
+        "caption": "Atalhos para eventos do ponto e controle de jogo."
+      },
+      "settings1": {
+        "alt": "Tela de recebimento de dados",
+        "caption": "Modo receptor ativo para salvar arquivos enviados pelo relogio."
+      },
+      "settings2": {
+        "alt": "Configuracoes avancadas de interface",
+        "caption": "Escolha entre modo simples e avancado."
+      },
+      "settings3": {
+        "alt": "Configuracoes de scoring e tie-break",
+        "caption": "Ajustes de deuce/no-ad e pontos do tie-break."
+      },
+      "settings4": {
+        "alt": "Configuracoes complementares",
+        "caption": "Opcoes de precisao para regras finais da partida."
+      },
+      "ui2": {
+        "alt": "Interface de jogo com dois botoes",
+        "caption": "Modo simples focado em velocidade de marcacao."
+      },
+      "ui6_1": {
+        "alt": "Interface avancada com seis botoes",
+        "caption": "Controle detalhado de winners, erros e saque."
+      },
+      "ui6_2": {
+        "alt": "Interface avancada com variacao de saque",
+        "caption": "Registro rapido de duplas faltas e eventos de saque."
+      },
+      "ui6_3": {
+        "alt": "Interface avancada com painel central",
+        "caption": "Visao de placar com comandos completos do ponto."
+      },
+      "errors1": {
+        "alt": "Modal de detalhes de erro",
+        "caption": "Classificacao de erro em unforced, forced e unreturn."
+      },
+      "errors2": {
+        "alt": "Modal de detalhes de winner",
+        "caption": "Escolha do tipo de finalizacao vencedora."
+      },
+      "winners1": {
+        "alt": "Tela de pausa da partida",
+        "caption": "Menu para retomar, consultar stats e finalizar jogo."
+      },
+      "winners2": {
+        "alt": "Tela de ponto detalhado",
+        "caption": "Selecao contextual de acao para cada ponto."
+      },
+      "pause1": {
+        "alt": "Painel de pausa com acoes principais",
+        "caption": "Retomar partida ou navegar para historico e stats."
+      },
+      "pause2": {
+        "alt": "Painel de pausa com acoes finais",
+        "caption": "Encerrar partida ou voltar ao menu inicial."
+      },
+      "matchStats": {
+        "alt": "Tela de estatisticas da partida",
+        "caption": "Resumo completo com comparativo entre jogadores."
+      },
+      "matchHistory": {
+        "alt": "Historico ponto a ponto",
+        "caption": "Sequencia de jogadas com placar detalhado por game."
+      },
+      "history": {
+        "alt": "Historico geral de partidas",
+        "caption": "Lista de partidas finalizadas com opcao de limpar."
+      }
+    }
+  }
+}
 
 

@@ -23,7 +23,7 @@ const Footer = () => {
             <Link to="/#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t("nav.features")}
             </Link>
-            <Link to="/#app" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            <Link to="/android" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t("nav.app")}
             </Link>
             <Link to="/#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-sm">

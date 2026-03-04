@@ -1,9 +1,9 @@
 ﻿{
   "nav": {
     "features": "Features",
-    "app": "App",
+    "app": "Android App",
     "howItWorks": "How It Works",
-    "watch": "Screens",
+    "watch": "Wear OS App",
     "download": "Download",
     "privacy": "Privacy Policy"
   },
@@ -612,6 +612,110 @@
         "caption": "Real-time stats to refine your strategy."
       }
     }
-  }}
+  },
+  "androidPage": {
+    "meta": {
+      "title": "Android App | Ace-Stats",
+      "description": "Gallery of Android phone screens, including setup, match scoring flow, and history."
+    },
+    "hero": {
+      "badge": "Ace-Stats on Phone",
+      "title": "Android App",
+      "subtitle": "A dedicated page to group the main phone app images while keeping the same visual pattern used in the project."
+    },
+    "groups": {
+      "setup": {
+        "title": "Setup and Configuration",
+        "description": "Initial screens to configure match rules and data receiving."
+      },
+      "match": {
+        "title": "Scoring and Match Flow",
+        "description": "In-match interface with scoring modes, pause menu, and point classification."
+      },
+      "analytics": {
+        "title": "History and Statistics",
+        "description": "Performance follow-up with point-by-point history and match stats."
+      }
+    },
+    "images": {
+      "menu1": {
+        "alt": "Main match setup screen",
+        "caption": "Quick configuration of sets, games, and entry actions."
+      },
+      "menu2": {
+        "alt": "Match actions screen",
+        "caption": "Shortcuts for point events and game control."
+      },
+      "settings1": {
+        "alt": "Data receive screen",
+        "caption": "Receiver mode waiting for files sent by the watch."
+      },
+      "settings2": {
+        "alt": "Advanced interface settings",
+        "caption": "Choose between simple and advanced UI mode."
+      },
+      "settings3": {
+        "alt": "Scoring and tie-break settings",
+        "caption": "Adjust deuce/no-ad and tie-break points."
+      },
+      "settings4": {
+        "alt": "Additional rules settings",
+        "caption": "Fine-tune final match rule behavior."
+      },
+      "ui2": {
+        "alt": "Two-button scoring interface",
+        "caption": "Simple mode focused on fast scoring."
+      },
+      "ui6_1": {
+        "alt": "Six-button advanced interface",
+        "caption": "Detailed control of winners, errors, and serve."
+      },
+      "ui6_2": {
+        "alt": "Advanced interface with serve variation",
+        "caption": "Quick logging of double faults and serve outcomes."
+      },
+      "ui6_3": {
+        "alt": "Advanced interface with central scoreboard",
+        "caption": "Full in-point control with detailed actions."
+      },
+      "errors1": {
+        "alt": "Error detail modal",
+        "caption": "Classify errors as unforced, forced, or unreturn."
+      },
+      "errors2": {
+        "alt": "Winner detail modal",
+        "caption": "Select the winner type for each point."
+      },
+      "winners1": {
+        "alt": "Paused match screen",
+        "caption": "Menu actions to resume, view stats, or end match."
+      },
+      "winners2": {
+        "alt": "Point detail screen",
+        "caption": "Context actions for each point event."
+      },
+      "pause1": {
+        "alt": "Pause panel with primary actions",
+        "caption": "Resume match or navigate to history and stats."
+      },
+      "pause2": {
+        "alt": "Pause panel with final actions",
+        "caption": "Finish the match or return to main menu."
+      },
+      "matchStats": {
+        "alt": "Match statistics screen",
+        "caption": "Full summary with side-by-side player metrics."
+      },
+      "matchHistory": {
+        "alt": "Point-by-point history screen",
+        "caption": "Detailed sequence of points and score progression."
+      },
+      "history": {
+        "alt": "General match history screen",
+        "caption": "List of completed matches with cleanup action."
+      }
+    }
+  }
+}
 
 
