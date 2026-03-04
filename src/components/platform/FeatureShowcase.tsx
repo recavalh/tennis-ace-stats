@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
-import { Watch, Brain, TrendingUp, Infinity } from "lucide-react";
+import { Watch, Brain, TrendingUp, Infinity as InfinityIcon } from "lucide-react";
 
 const FeatureShowcase = () => {
   const { t } = useTranslation();
 
   const features = [
     {
-      icon: Infinity,
+      icon: InfinityIcon,
       titleKey: "platform.featureShowcase.items.unlimited.title",
       descriptionKey: "platform.featureShowcase.items.unlimited.description",
     },
