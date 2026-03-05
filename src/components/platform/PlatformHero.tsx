@@ -31,10 +31,12 @@ const PlatformHero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up animate-delay-300">
-          <Button variant="hero" size="xl" className="w-full sm:w-auto group" onClick={() => setBetaModalOpen(true)}>
-            {t("platform.hero.startFree")}
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <a href="https://ace-stats.base44.app/" target="_blank" rel="noopener noreferrer">
+            <Button variant="hero" size="xl" className="w-full sm:w-auto group">
+              {t("platform.hero.startFree")}
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
           <Button variant="heroOutline" size="xl" className="w-full sm:w-auto" onClick={() => setBetaModalOpen(true)}>
             <Play className="w-5 h-5 mr-2" />
             {t("platform.hero.viewDemo")}
