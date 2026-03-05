@@ -37,10 +37,7 @@ const PlatformHero = () => {
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </a>
-          <Button variant="heroOutline" size="xl" className="w-full sm:w-auto" onClick={() => setBetaModalOpen(true)}>
-            <Play className="w-5 h-5 mr-2" />
-            {t("platform.hero.viewDemo")}
-          </Button>
+          </a>
         </div>
 
         <p className="mt-8 text-sm text-muted-foreground animate-slide-up animate-delay-400">
