@@ -37,7 +37,6 @@ const PlatformHero = () => {
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </a>
-          </a>
         </div>
 
         <p className="mt-8 text-sm text-muted-foreground animate-slide-up animate-delay-400">
