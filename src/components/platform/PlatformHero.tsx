@@ -44,7 +44,7 @@ const PlatformHero = () => {
         </div>
 
         <p className="mt-8 text-sm text-muted-foreground animate-slide-up animate-delay-400">
-          ✓ {t("platform.hero.trustBadges.noCard")} &nbsp;•&nbsp; ✓ {t("platform.hero.trustBadges.quickSetup")} &nbsp;•&nbsp; ✓ {t("platform.hero.trustBadges.cancelAnytime")}
+          ✓ {t("platform.hero.trustBadges.noCard")} &nbsp;•&nbsp; ✓ {t("platform.hero.trustBadges.quickSetup")}
         </p>
       </div>
 
