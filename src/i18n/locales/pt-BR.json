@@ -638,81 +638,45 @@
       }
     },
     "images": {
-      "menu1": {
-        "alt": "Tela principal de setup da partida",
-        "caption": "Definicao rapida de sets, games e comandos iniciais."
+      "setup": {
+        "alt": "Tela de configuração da partida",
+        "caption": "Configure sets, games, tie-break e saque antes de iniciar."
       },
-      "menu2": {
-        "alt": "Tela de acoes da partida",
-        "caption": "Atalhos para eventos do ponto e controle de jogo."
+      "settings": {
+        "alt": "Tela de configurações avançadas",
+        "caption": "Escolha modo de UI, regras de pontuação e opções de tie-break."
       },
-      "settings1": {
+      "share": {
         "alt": "Tela de recebimento de dados",
-        "caption": "Modo receptor ativo para salvar arquivos enviados pelo relogio."
+        "caption": "Modo receptor aguardando arquivos enviados pelo relógio."
       },
-      "settings2": {
-        "alt": "Configuracoes avancadas de interface",
-        "caption": "Escolha entre modo simples e avancado."
+      "live": {
+        "alt": "Tela de pontuação ao vivo",
+        "caption": "Placar em tempo real com acompanhamento de set e game."
       },
-      "settings3": {
-        "alt": "Configuracoes de scoring e tie-break",
-        "caption": "Ajustes de deuce/no-ad e pontos do tie-break."
+      "detailWinner": {
+        "alt": "Tela de detalhe de winner",
+        "caption": "Classifique winners: baseline, voleio, smash ou return."
       },
-      "settings4": {
-        "alt": "Configuracoes complementares",
-        "caption": "Opcoes de precisao para regras finais da partida."
+      "detailErrors": {
+        "alt": "Tela de detalhe de erro",
+        "caption": "Classifique erros: não-forçado, forçado ou não-devolvido."
       },
-      "ui2": {
-        "alt": "Interface de jogo com dois botoes",
-        "caption": "Modo simples focado em velocidade de marcacao."
+      "pause": {
+        "alt": "Tela de partida pausada",
+        "caption": "Retomar, ver stats, histórico ou encerrar a partida."
       },
-      "ui6_1": {
-        "alt": "Interface avancada com seis botoes",
-        "caption": "Controle detalhado de winners, erros e saque."
-      },
-      "ui6_2": {
-        "alt": "Interface avancada com variacao de saque",
-        "caption": "Registro rapido de duplas faltas e eventos de saque."
-      },
-      "ui6_3": {
-        "alt": "Interface avancada com painel central",
-        "caption": "Visao de placar com comandos completos do ponto."
-      },
-      "errors1": {
-        "alt": "Modal de detalhes de erro",
-        "caption": "Classificacao de erro em unforced, forced e unreturn."
-      },
-      "errors2": {
-        "alt": "Modal de detalhes de winner",
-        "caption": "Escolha do tipo de finalizacao vencedora."
-      },
-      "winners1": {
-        "alt": "Tela de pausa da partida",
-        "caption": "Menu para retomar, consultar stats e finalizar jogo."
-      },
-      "winners2": {
-        "alt": "Tela de ponto detalhado",
-        "caption": "Selecao contextual de acao para cada ponto."
-      },
-      "pause1": {
-        "alt": "Painel de pausa com acoes principais",
-        "caption": "Retomar partida ou navegar para historico e stats."
-      },
-      "pause2": {
-        "alt": "Painel de pausa com acoes finais",
-        "caption": "Encerrar partida ou voltar ao menu inicial."
-      },
-      "matchStats": {
-        "alt": "Tela de estatisticas da partida",
+      "stats": {
+        "alt": "Tela de estatísticas da partida",
         "caption": "Resumo completo com comparativo entre jogadores."
       },
-      "matchHistory": {
-        "alt": "Historico ponto a ponto",
-        "caption": "Sequencia de jogadas com placar detalhado por game."
+      "pointByPoint": {
+        "alt": "Histórico ponto a ponto",
+        "caption": "Sequência detalhada de pontos e progressão do placar."
       },
       "history": {
-        "alt": "Historico geral de partidas",
-        "caption": "Lista de partidas finalizadas com opcao de limpar."
+        "alt": "Histórico de partidas",
+        "caption": "Lista de partidas com acesso a compartilhamento e stats."
       }
     }
   }

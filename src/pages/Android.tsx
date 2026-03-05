@@ -34,31 +34,22 @@ const Android = () => {
   });
 
   const setupImages: GalleryItem[] = [
-    buildImage("menu1", "/images/watch/Menu%201.png"),
-    buildImage("settings1", "/images/watch/Settings%20(1).png"),
-    buildImage("settings2", "/images/watch/Settings%20(2).png"),
-    buildImage("settings3", "/images/watch/Settings%20(3).png"),
-    buildImage("settings4", "/images/watch/Settings%20(4).png"),
+    buildImage("setup", "/images/android/setup.png"),
+    buildImage("settings", "/images/android/settings.png"),
+    buildImage("share", "/images/android/share.png"),
   ];
 
   const matchFlowImages: GalleryItem[] = [
-    buildImage("menu2", "/images/watch/Menu%202.png"),
-    buildImage("ui2", "/images/watch/Ui%202%20button.png"),
-    buildImage("ui6_1", "/images/watch/Ui%206%20buttons%20(1).png"),
-    buildImage("ui6_2", "/images/watch/Ui%206%20buttons%20(2).png"),
-    buildImage("ui6_3", "/images/watch/Ui%206%20buttons%20(3).png"),
-    buildImage("errors1", "/images/watch/Erros%20(1).png"),
-    buildImage("errors2", "/images/watch/Erros%20(2).png"),
-    buildImage("winners1", "/images/watch/Winnes%20(1).png"),
-    buildImage("winners2", "/images/watch/Winnes%20(2).png"),
-    buildImage("pause1", "/images/watch/Pause%20(1).png"),
-    buildImage("pause2", "/images/watch/Pause%20(2).png"),
+    buildImage("live", "/images/android/live.png"),
+    buildImage("detailWinner", "/images/android/detail-winner.png"),
+    buildImage("detailErrors", "/images/android/detail-errors.png"),
+    buildImage("pause", "/images/android/pause.png"),
   ];
 
   const analyticsImages: GalleryItem[] = [
-    buildImage("matchStats", "/images/watch/Match%20stats.png"),
-    buildImage("matchHistory", "/images/watch/match%20history.png"),
-    buildImage("history", "/images/watch/History.png"),
+    buildImage("stats", "/images/android/stats.png"),
+    buildImage("pointByPoint", "/images/android/point-by-point.png"),
+    buildImage("history", "/images/android/history.png"),
   ];
 
   const imageGroups: ImageGroup[] = [
