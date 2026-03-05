@@ -24,9 +24,9 @@ const plans = [
   {
     name: "Ace Pro",
     subtitle: "A Evolução",
-    price: "R$ 19,90",
-    period: "/ mês",
-    priceNote: "Preço de um grip",
+    price: "EM BREVE",
+    period: "",
+    priceNote: "",
     description: "Para quem quer vencer mais.",
     features: [
       { text: "Tudo do Free", included: true },
