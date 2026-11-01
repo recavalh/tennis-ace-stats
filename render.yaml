@@ -14,7 +14,7 @@ services:
       - key: NODE_ENV
         value: production
       - key: APP_ORIGINS
-        value: https://app.ace-stats.com
+        value: https://app.ace-stats.com,https://ace-stats-game.pages.dev
       - key: DATABASE_URL
         sync: false
       - key: PGPASSWORD
