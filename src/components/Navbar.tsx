@@ -26,7 +26,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-6">
               <Link to="/#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
                 {t("nav.features")}
               </Link>
@@ -39,10 +39,11 @@ const Navbar = () => {
               <Link to="/watch" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
                 {t("nav.watch")}
               </Link>
+              <Link to="/jogo" className="text-tennis-green hover:text-foreground transition-colors text-sm font-semibold">{t("nav.game")}</Link>
             </div>
 
             {/* Right side */}
-            <div className="hidden md:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3">
               <LanguageSwitcher />
               <Button variant="hero" size="default" onClick={() => setBetaModalOpen(true)}>
                 <Watch className="w-4 h-4 mr-2" />
@@ -51,7 +52,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="flex items-center gap-2 md:hidden">
+            <div className="flex items-center gap-2 lg:hidden">
               <LanguageSwitcher />
               <button
                 className="p-2 text-foreground"
@@ -65,7 +66,7 @@ const Navbar = () => {
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <div className="md:hidden pt-4 pb-2 border-t border-border/30 mt-3">
+            <div className="lg:hidden pt-4 pb-2 border-t border-border/30 mt-3">
               <div className="flex flex-col gap-4">
                 <Link 
                   to="/#features" 
@@ -95,6 +96,7 @@ const Navbar = () => {
                 >
                   {t("nav.watch")}
                 </Link>
+                <Link to="/jogo" className="py-2 text-sm font-semibold text-tennis-green" onClick={() => setIsOpen(false)}>{t("nav.game")}</Link>
                 <Button variant="hero" size="default" className="w-full mt-2" onClick={() => setBetaModalOpen(true)}>
                   <Watch className="w-4 h-4 mr-2" />
                   {t("nav.download")}

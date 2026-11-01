@@ -5,11 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prepare-pages.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "dev:game": "npm --prefix strategy-game run dev",
+    "check:game": "npm --prefix strategy-game run check",
+    "test:game": "npm --prefix strategy-game test"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

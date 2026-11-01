@@ -1,18 +1,20 @@
-﻿{
+{
   "nav": {
     "features": "Recursos",
     "app": "App Android",
     "howItWorks": "Como Funciona",
     "watch": "App Wear OS",
     "download": "Download",
-    "privacy": "Política de Privacidade"
+    "privacy": "Política de Privacidade",
+    "game": "Jogo de estratégia"
   },
   "hero": {
     "badge": "Exclusivo para WearOS",
     "subtitle": "Wearable Tennis Performance",
     "description": "Registre cada ponto, analise suas estatísticas e evolua seu jogo. Direto do seu smartwatch Android.",
     "downloadBtn": "Baixar na Play Store",
-    "statsBtn": "Ver Estatísticas"
+    "statsBtn": "Ver Estatísticas",
+    "gameBtn": "Treine suas decisões no Tennis Tático"
   },
   "features": {
     "title": "Recursos",
@@ -106,13 +108,15 @@
     "title": "Política de Privacidade",
     "metaDescription": "Saiba como o Ace-Stats trata seus dados e protege sua privacidade.",
     "paragraph1": "Este aplicativo não coleta, armazena nem transmite dados pessoais do usuário para servidores externos ou terceiros.",
-    "paragraph2": "Todos os dados gerados pelo aplicativo, como estatísticas de partidas e registros esportivos, são armazenados exclusivamente no dispositivo do usuário.",
+    "paragraph2": "Nos aplicativos de celular e relógio, os registros esportivos são armazenados no dispositivo até que você escolha exportá-los ou compartilhá-los. O jogo web utiliza armazenamento no servidor, conforme explicado abaixo.",
     "paragraph3": "O aplicativo não utiliza contas de usuário, não solicita login e não realiza qualquer tipo de rastreamento, análise de comportamento ou coleta automática de informações pessoais.",
     "paragraph4": "O compartilhamento de dados, quando disponível, ocorre somente por iniciativa explícita do usuário, por meio das ferramentas nativas do sistema operacional (por exemplo, exportação ou compartilhamento manual de arquivos). O aplicativo não controla nem armazena essas informações após o compartilhamento.",
     "paragraph5": "O aplicativo não exibe anúncios e não utiliza serviços de terceiros para coleta de dados.",
     "contactTitle": "Contato",
     "contactText": "Caso o usuário tenha dúvidas ou solicitações relacionadas à privacidade, pode entrar em contato pelo e-mail:",
-    "updates": "Esta política pode ser atualizada futuramente para refletir melhorias ou mudanças no aplicativo."
+    "updates": "Esta política pode ser atualizada futuramente para refletir melhorias ou mudanças no aplicativo.",
+    "gameTitle": "Dados do Tennis Tático",
+    "gameBody": "No jogo web, o servidor armazena seu apelido, preferências, decisões e histórico de treinos e duelos. Como visitante, um identificador privado salvo no navegador permite recuperar esse perfil naquele navegador. Ao entrar com Google, recebemos o identificador da conta e o e-mail para vincular seu progresso e permitir acesso em outros dispositivos. O adversário vê seu apelido, cor e os dados da partida em que participa; seu histórico pessoal não é público. Os provedores de hospedagem, banco de dados e autenticação processam os dados necessários ao funcionamento. Para solicitar exclusão ou esclarecer dúvidas, use o contato abaixo."
   },
   "betaModal": {
     "title": "Beta Fechado",
@@ -715,7 +719,62 @@
         "caption": "Lista de partidas finalizadas com opcao de limpar."
       }
     }
+  },
+  "game": {
+    "meta": {
+      "title": "Tennis Tático | Jogo de estratégia de tênis — Ace Stats",
+      "description": "Treine decisões de tênis no navegador. Explore 12 situações, jogue contra o computador ou convide um amigo."
+    },
+    "badge": "ESTRATÉGIA DE TÊNIS, NO SEU RITMO",
+    "play": "Jogar agora",
+    "explore": "Conhecer os modos",
+    "hero": {
+      "title": "O próximo ponto começa",
+      "highlight": "na sua cabeça.",
+      "description": "Um jogo para o tenista amador experimentar golpes, encontrar espaços e pensar na recuperação. Jogue sozinho ou convide seu parceiro de quadra.",
+      "browser": "Direto no navegador",
+      "guest": "Entre como visitante",
+      "free": "Grátis para jogar"
+    },
+    "preview": {
+      "turn": "Sua decisão",
+      "position": "PENSE NA RECUPERAÇÃO",
+      "alt": "Ilustração de uma quadra com um golpe planejado e uma posição de recuperação",
+      "caption": "Escolha o golpe. Marque sua recuperação. Veja como a decisão muda o ponto.",
+      "note": "Ilustração do funcionamento do jogo."
+    },
+    "modes": {
+      "eyebrow": "SUA QUADRA DE APRENDIZADO",
+      "title": "Três formas de entrar no jogo.",
+      "academy": {
+        "title": "Academia Tática",
+        "description": "12 situações de tênis para experimentar escolhas. Jogue sem cronômetro, entenda o resultado e tente de novo.",
+        "action": "Começar um treino"
+      },
+      "computer": {
+        "title": "Contra o computador",
+        "description": "Dispute um tie-break contra adversários consistentes, agressivos ou defensivos. Escolha seu ritmo e construa o ponto.",
+        "action": "Escolher adversário"
+      },
+      "duel": {
+        "title": "Desafie um amigo",
+        "description": "Crie uma sala privada e compartilhe o link. Seu amigo pode entrar como visitante e jogar com você em tempo real.",
+        "action": "Criar ou entrar em sala"
+      }
+    },
+    "learn": {
+      "title": "Um golpe é só parte da decisão.",
+      "description": "Onde o adversário está? Vale acelerar ou jogar com margem? Para onde voltar depois da batida? Você escolhe o golpe e a recuperação e recebe uma leitura do que aconteceu.",
+      "note": "Os indicadores são avaliações educacionais do jogo. Eles não medem cientificamente sua inteligência nem substituem a prática em quadra e a orientação de um professor."
+    },
+    "account": {
+      "title": "Experimente primeiro. Guarde sua evolução.",
+      "description": "Jogue como visitante e mantenha seu progresso naquele navegador. Ao entrar com Google, seus treinos e histórico ficam vinculados à sua conta para continuar em outros dispositivos.",
+      "privacy": "Seu histórico é privado. No duelo, seu amigo vê seu apelido e as informações daquela partida."
+    },
+    "cta": {
+      "title": "Sua primeira decisão está esperando.",
+      "description": "Abra o jogo, escolha como entrar e experimente um treino. Você não precisa instalar nada."
+    }
   }
 }
-
-

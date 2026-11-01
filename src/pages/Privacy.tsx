@@ -38,6 +38,8 @@ const Privacy = () => {
               ))}
             </section>
 
+            <section className="space-y-3 text-muted-foreground"><h2 className="text-lg font-semibold text-foreground">{t("privacy.gameTitle")}</h2><p className="leading-relaxed">{t("privacy.gameBody")}</p></section>
+
             <section className="space-y-3">
               <h2 className="text-lg font-semibold text-foreground">{t("privacy.contactTitle")}</h2>
               <p className="text-muted-foreground">{t("privacy.contactText")}</p>

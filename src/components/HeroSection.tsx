@@ -64,6 +64,8 @@ const HeroSection = () => {
         </div>
       </div>
 
+      <Link to="/jogo" className="relative z-10 mt-7 mb-16 inline-flex items-center gap-2 text-sm font-medium text-tennis-green underline-offset-4 hover:underline">{t("hero.gameBtn")} <span aria-hidden="true">→</span></Link>
+
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <ChevronDown className="w-8 h-8 text-muted-foreground" />

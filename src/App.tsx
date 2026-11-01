@@ -10,6 +10,7 @@ import Platform from "./pages/Platform";
 import Privacy from "./pages/Privacy";
 import Watch from "./pages/Watch";
 import NotFound from "./pages/NotFound";
+import Game from "./pages/Game";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/android" element={<Android />} />
             <Route path="/platform" element={<Platform />} />
             <Route path="/watch" element={<Watch />} />
+            <Route path="/jogo" element={<Game />} />
             <Route path="/privacy" element={<Privacy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

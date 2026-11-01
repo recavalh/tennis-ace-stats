@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          <nav className="flex items-center gap-8">
+          <nav className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
             <Link to="/#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t("nav.features")}
             </Link>
@@ -32,6 +32,7 @@ const Footer = () => {
             <Link to="/watch" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t("nav.watch")}
             </Link>
+            <Link to="/jogo" className="text-tennis-green hover:text-foreground transition-colors text-sm">{t("nav.game")}</Link>
             <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               {t("nav.privacy")}
             </Link>
