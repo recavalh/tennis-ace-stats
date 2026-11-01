@@ -31,18 +31,16 @@ const PlatformHero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up animate-delay-300">
-          <Button variant="hero" size="xl" className="w-full sm:w-auto group" onClick={() => setBetaModalOpen(true)}>
-            {t("platform.hero.startFree")}
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button variant="heroOutline" size="xl" className="w-full sm:w-auto" onClick={() => setBetaModalOpen(true)}>
-            <Play className="w-5 h-5 mr-2" />
-            {t("platform.hero.viewDemo")}
-          </Button>
+          <a href="https://ace-stats.base44.app/" target="_blank" rel="noopener noreferrer">
+            <Button variant="hero" size="xl" className="w-full sm:w-auto group">
+              {t("platform.hero.startFree")}
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
         </div>
 
         <p className="mt-8 text-sm text-muted-foreground animate-slide-up animate-delay-400">
-          ✓ {t("platform.hero.trustBadges.noCard")} &nbsp;•&nbsp; ✓ {t("platform.hero.trustBadges.quickSetup")} &nbsp;•&nbsp; ✓ {t("platform.hero.trustBadges.cancelAnytime")}
+          ✓ {t("platform.hero.trustBadges.noCard")} &nbsp;•&nbsp; ✓ {t("platform.hero.trustBadges.quickSetup")}
         </p>
       </div>
 
