@@ -2,6 +2,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 import pg from 'pg';
+import {SUPABASE_ROOT_CA} from './supabase-ca';
 
 export type Row = Record<string, unknown>;
 export interface Database {
@@ -55,12 +56,14 @@ export function postgresPool(connectionString: string) {
   // Always verify TLS, even if the copied connection string contains sslmode=require.
   for (const name of ['sslmode', 'sslcert', 'sslkey', 'sslrootcert']) url.searchParams.delete(name);
   const local = ['localhost', '127.0.0.1', '::1', '[::1]'].includes(url.hostname);
+  // Supabase's shared pooler uses its published CA, outside Node's public root store.
+  const ca = process.env.DATABASE_CA_CERT?.replace(/\\n/g, '\n') || (url.hostname.endsWith('.pooler.supabase.com') ? SUPABASE_ROOT_CA : undefined);
   const pool = new pg.Pool({
     connectionString: url.toString(),
     max: 4,
     connectionTimeoutMillis: 12_000,
     idleTimeoutMillis: 30_000,
-    ssl: local ? false : {rejectUnauthorized: true, ...(process.env.DATABASE_CA_CERT ? {ca: process.env.DATABASE_CA_CERT.replace(/\\n/g, '\n')} : {})},
+    ssl: local ? false : {rejectUnauthorized: true, ...(ca ? {ca} : {})},
   });
   pool.on('error', () => console.error('A conexão ociosa com o banco foi encerrada; a próxima operação tentará reconectar.'));
   return pool;

@@ -27,7 +27,7 @@ Aplique database/001_game.sql pelo SQL Editor ou execute, com DATABASE_URL no am
 
     npm run db:migrate
 
-A migração é idempotente e não contém exclusão de dados. Use a conexão do Session Pooler indicada pelo painel do Supabase para a região do projeto. TLS é verificado. Se a conexão exigir a CA do projeto, configure DATABASE_CA_CERT com o certificado fornecido pelo Supabase.
+A migração é idempotente e não contém exclusão de dados. Use a conexão do Session Pooler indicada pelo painel do Supabase para a região do projeto. TLS e hostname são verificados. Para os hosts do pooler compartilhado *.pooler.supabase.com, o servidor inclui a CA pública oficial Supabase Root 2021. DATABASE_CA_CERT permite substituir a CA explicitamente quando necessário. O certificado distribuído pelo painel está em https://supabase-downloads.s3-ap-southeast-1.amazonaws.com/prod/ssl/prod-ca-2021.crt.
 
 ## Google
 
@@ -83,3 +83,5 @@ Para verificar o adaptador PostgreSQL em uma instalação local isolada do Postg
     powershell -File scripts/verify-local-postgres.ps1
 
 Esse teste cria um cluster temporário em output, usa apenas loopback e o encerra ao concluir. Ele não usa o banco de produção.
+
+A validação TLS pública, sem enviar senha ou SQL, pode ser executada na pasta strategy-game com node --import tsx scripts/verify-database-tls.ts. Ela confirma a cadeia e o hostname corretos e exige rejeição de CA ausente e hostname incorreto.
