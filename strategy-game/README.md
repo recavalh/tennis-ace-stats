@@ -46,7 +46,7 @@ Senhas e segredos entram nos painéis dos provedores ou em .env local; nunca em 
 
 O manifesto render.yaml na raiz declara apenas um Web Service Free, sem banco pago ou disco adicional. Configure:
 
-- DATABASE_URL: conexão privada do PostgreSQL.
+- DATABASE_URL: conexão privada do PostgreSQL. A senha pode ficar em PGPASSWORD, sem precisar codificar caracteres especiais na URL.
 - SUPABASE_URL: URL pública do projeto.
 - SUPABASE_PUBLISHABLE_KEY: chave pública, nunca service_role ou sb_secret.
 - APP_ORIGINS: origens exatas permitidas, separadas por vírgula. Inclua https://app.ace-stats.com e o domínio pages.dev de revisão, se usado.
