@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { io, type Socket } from 'socket.io-client';
-import { ArrowUpRight, ArrowRight, ArrowLeft, Check, CheckCheck, ChevronRight, Clock3, Copy, Crosshair, Flag, Home, Layers3, LogOut, Menu, Play, Plus, RotateCcw, Settings2, ShieldCheck, Sparkles, Target, TrendingUp, Trophy, Users, VolumeX, Wifi, X, Zap, BookOpen, CircleHelp, Activity } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, ArrowLeft, Check, CheckCheck, ChevronRight, Clock3, Copy, Crosshair, Flag, Home, Layers3, LogOut, Menu, Play, Plus, RotateCcw, Settings2, ShieldCheck, Smartphone, Sparkles, Target, TrendingUp, Trophy, Users, VolumeX, Wifi, X, Zap, BookOpen, CircleHelp, Activity } from 'lucide-react';
 import { SCENARIOS } from '../../../content/scenarios/index';
 import { LEVEL_SECONDS, side, type Ack, type BotStyle, type Decision, type Profile, type Progress, type RoomView, type ShotId, type Vec } from '../../../packages/shared/src/index';
 import { SHOTS } from '../../../packages/game-engine/src/config';
@@ -11,6 +11,7 @@ import { RecoveryBoundary, RecoveryPanel } from './RecoveryBoundary';
 import { HeroCourt, MiniCourt } from './CourtIllustrations';
 import './style.css';
 import './entry.css';
+import './game-mobile.css';
 import Welcome, {GoogleMark} from './Welcome';
 import {apiUrl, GAME_SERVER_URL, SITE_URL, readLocal, writeLocal, readRoom, useAccount} from './accounts';
 const Court = lazy(() => import('./Court'));
@@ -105,7 +106,7 @@ function App() {
   if (!visitor && !accessToken) return <Welcome onGuest={enterGuest} onGoogle={() => {void account.signIn();}} googleEnabled={account.enabled} loading={account.loading} error={account.error} onRetry={account.retry} invitation={new URLSearchParams(location.search).has('sala')}/>;
   const inGame = !!room?.state;
   return <>
-    <header className="app-header">
+    <header className={inGame ? 'app-header game-header' : 'app-header'}>
       <button className="brand" onClick={() => navigate('home')} aria-label="Tennis Tático — início"><span className="brand-icon"><span/></span><span>TENNIS<span className="brand-light">TÁTICO</span><small>ARENA DE ESTRATÉGIAS</small></span></button>
       <nav aria-label="Navegação principal">{([{id: 'home', label: 'Visão geral', icon: Home}, {id: 'academy', label: 'Academia', icon: Layers3}, {id: 'duel', label: 'Duelo', icon: Users}, {id: 'progress', label: 'Meu progresso', icon: TrendingUp}] as const).map(item => <button key={item.id} className={!room && page === item.id ? 'active' : ''} disabled={!!room} onClick={() => navigate(item.id)}><item.icon size={17}/><span>{item.label}</span></button>)}</nav>
       <div className="header-end"><span className={`network-dot ${online ? 'connected' : ''}`} title={online ? 'Servidor conectado' : 'Reconectando'}/><button className="icon-button settings-button" onClick={() => setProfileOpen(true)} aria-label="Configurações" disabled={!!room}><Settings2 size={19}/></button><button className="profile-button" disabled={!!room} onClick={() => setProfileOpen(true)}><span className="avatar" style={{background: profile.color}}>{profile.nickname.slice(0, 1).toUpperCase()}</span><span>{profile.nickname}<small>{profile.audience === 'child' ? 'Perfil infantil' : 'Seu espaço de treino'}</small></span></button></div>
@@ -185,6 +186,17 @@ function Game({room, profile, request, leave, offset, notify, replay, setReplay}
   const allDecisions = s.points.flatMap(p => p.decisions).filter(d => d.player === mine);
   const matchMean = (field: 'shotIQ' | 'positionIQ') => allDecisions.length ? Math.round(allDecisions.reduce((n, d) => n + d[field], 0) / allDecisions.length) : '—';
   const serve = s.phase === 'SERVE_DECISION', setup = s.phase === 'RECEIVER_POSITION', moving = s.phase === 'BALL_ANIMATION';
+  const decisionTitle = scenario && s.rally === 1 ? scenario.title
+    : setup ? myTurn ? 'Onde você espera a bola?' : 'O rival está se posicionando.'
+    : serve ? myTurn ? 'Comece com intenção.' : 'Prepare-se para o saque.'
+    : myTurn ? 'Qual é a sua próxima bola?' : 'Antecipe o próximo espaço.';
+  const decisionDescription = setup
+    ? 'Toque no seu lado da quadra, inclusive atrás da linha de fundo, e confirme.'
+    : serve
+      ? `${s.serveAttempt === 1 ? 'Primeiro' : 'Segundo'} serviço · lado de ${s.serveSide === 'deuce' ? 'igualdade' : 'vantagem'}. ${s.serveAttempt === 2 ? 'Uma nova falta encerra o ponto.' : 'Escolha direção, efeito e recuperação.'}`
+      : myTurn
+        ? scenario?.objective ?? 'Escolha o golpe e a posição que deseja proteger depois de bater.'
+        : 'Observe onde o adversário está e como ele constrói a jogada.';
   async function confirm() {
     if (!target || (!setup && !shot)) return;
     setSending(true);
@@ -192,23 +204,35 @@ function Game({room, profile, request, leave, offset, notify, replay, setReplay}
     if (!result) setSending(false);
   }
   return <>
-    <div className="game-top"><button className="text-button" onClick={leave}><LogOut size={16}/><span>Sair da quadra</span></button><span className="game-mode"><span className="live-dot"/>{MODE_LABEL[room.mode]}<b>{scenario?.category ?? `TIE-BREAK ATÉ 7 · SALA ${room.code}`}</b></span><button className={`text-button ${showHistory ? 'selected' : ''}`} onClick={() => setShowHistory(!showHistory)}><Layers3 size={16}/> Histórico</button></div>
+    <div className={review && !room.paused ? 'game-stage game-review' : 'game-stage'}>
+    <div className="game-top"><button className="text-button" onClick={leave}><LogOut size={16}/><span>Sair da quadra</span></button><span className="game-mode"><span className="live-dot"/>{MODE_LABEL[room.mode]}<b>{scenario?.category ?? `TIE-BREAK ATÉ 7 · SALA ${room.code}`}</b></span><button className={`text-button ${showHistory ? 'selected' : ''}`} aria-expanded={showHistory} onClick={() => setShowHistory(!showHistory)}><Layers3 size={16}/> Histórico</button></div>
     <div className="scoreboard"><div className="score-player"><span className="player-dot" style={{background: s.players[0].color}}/><span>{s.players[0].name}<small>{mine === 0 ? 'VOCÊ' : 'ADVERSÁRIO'}</small></span>{s.server === 0 && <span className="serve-ball" title="Sacador"/>}</div><div className="score-numbers"><strong>{s.score[0]}</strong><span>:</span><strong>{s.score[1]}</strong></div><div className="score-player right">{s.server === 1 && <span className="serve-ball" title="Sacador"/>}<span>{s.players[1].name}<small>{mine === 1 ? 'VOCÊ' : 'ADVERSÁRIO'}</small></span><span className="player-dot" style={{background: s.players[1].color}}/></div></div>
+    <p className="rotation-tip"><Smartphone size={15} aria-hidden="true"/> Vire o celular para ver a quadra ao lado dos controles.</p>
     <div className="game-layout"><section className="court-panel"><div className="court-panel-top"><span><i/> {review ? 'REVISÃO DO PONTO' : moving ? 'BOLA EM JOGO' : myTurn ? 'SUA DECISÃO' : 'VEZ DO ADVERSÁRIO'}</span><span>PONTO {s.pointNumber + (review ? 0 : 1)} <b>·</b> {s.rally} GOLPES</span></div><Suspense fallback={<div className="court-loading">Preparando sua quadra…</div>}><Court room={room} target={target} onSelect={p => {if (myTurn) setTarget(p);}} replay={replay} replayKey={replayKey}/></Suspense><div className="court-legend"><span><i className="legend-you"/> Você</span><span><i className="legend-destination"/> Recuperação</span><span><i className="legend-ball"/> Bola</span></div><div className="court-instruction">{review ? 'Tracejado claro: cobertura sugerida · região vermelha: espaço exposto' : myTurn ? 'Toque no seu lado da quadra para marcar a posição desejada' : 'Observe a trajetória e antecipe a próxima resposta'}</div></section>
       <aside className="decision-panel">
         {room.paused ? <div className="paused-content"><Wifi size={34}/><p className="eyebrow">PARTIDA PAUSADA</p><h2>Esperando reconexão.</h2><p>O cronômetro e a simulação estão pausados.</p><strong>{room.canAbandon ? 'Prazo encerrado' : `${Math.max(0, Math.ceil(((room.reconnectUntil ?? 0) - now - offset) / 1000))}s para retornar`}</strong>{room.canAbandon && <button className="button dark" onClick={() => request('match:abandon')}>Encerrar sala</button>}</div> : review ? <>
           <div className="review-result"><span className="result-icon">{s.winner === mine ? <Trophy size={27}/> : <Flag size={27}/>}</span><p className="eyebrow">{s.phase === 'MATCH_FINISHED' ? 'TIE-BREAK ENCERRADO' : 'PONTO ENCERRADO'}</p><h2>{s.phase === 'MATCH_FINISHED' ? s.score[mine] > s.score[mine === 0 ? 1 : 0] ? 'A partida é sua.' : 'Um jogo de aprendizado.' : s.winner === mine ? 'Esse ponto é seu.' : `Ponto de ${s.players[s.winner!].name.split(' · ')[0]}.`}</h2><p>{s.reason} <span>·</span> {s.rally} golpes</p></div>
+          <div className="review-details">
           {s.phase === 'MATCH_FINISHED' && <div className="match-totals"><span><b>{s.points.length}</b>pontos</span><span><b>{(s.points.reduce((n, p) => n + p.decisions.length, 0) / Math.max(1, s.points.length)).toFixed(1)}</b>golpes / rally</span></div>}
           <div className="iq-row"><div><small>QI DE GOLPES</small><strong>{s.phase === 'MATCH_FINISHED' ? matchMean('shotIQ') : mean('shotIQ') ?? '—'}<span>/100</span></strong></div><div><small>QI DE POSICIONAMENTO</small><strong>{s.phase === 'MATCH_FINISHED' ? matchMean('positionIQ') : mean('positionIQ') ?? '—'}<span>/100</span></strong></div></div>
           <section className="coach-note"><div><Sparkles size={17}/><strong>{profile.audience === 'child' ? 'Dica do treinador' : 'Uma leitura do ponto'}</strong></div>{decision ? <><p>{profile.audience === 'child' ? TacticalCoach.child(decision) : decision.explanation}</p><span className="coach-alternative"><ArrowUpRight size={16}/>{profile.audience === 'child' ? 'Jogue de novo e teste uma posição diferente!' : decision.alternative}</span></> : <p>O ponto terminou antes de você bater. Observe o saque e experimente ajustar a posição de devolução no próximo ponto.</p>}</section>
           <small className="heuristic-note">Indicadores educacionais: uma boa escolha também pode terminar em erro de execução.</small>
+          </div>
           <button className="button outline full-width" onClick={() => {setReplay(s.decisions); setReplayKey(n => n + 1);}} disabled={!s.decisions.length}><RotateCcw size={16}/> Rever trajetórias</button>
           {mine === 0 ? <button className="button dark full-width" onClick={() => request(s.phase === 'MATCH_FINISHED' ? 'match:rematch' : 'point:next')}>{s.phase === 'MATCH_FINISHED' ? 'Jogar revanche' : room.mode === 'academy' ? 'Repetir e experimentar' : 'Próximo ponto'}<ArrowRight size={17}/></button> : <p className="waiting-text">Aguardando o anfitrião continuar.</p>}
           {room.mode === 'academy' && <button className="text-button full-width" onClick={leave}>Escolher outro exercício <ChevronRight size={16}/></button>}
         </> : <>
-          <div className="decision-header"><p className="eyebrow">{setup ? '01 · PREPARE A DEVOLUÇÃO' : serve ? `0${s.serveAttempt} · ESCOLHA O SAQUE` : 'LEIA. ESCOLHA. RECUPERE.'}</p><div className={`timer ${remaining !== null && remaining < 2 ? 'urgent' : ''}`}><Clock3 size={17}/>{moving ? 'Em jogo' : remaining === null ? 'Livre' : `${remaining.toFixed(1)}s`}</div></div>
-          <h2>{scenario && s.rally === 1 ? scenario.title : setup ? myTurn ? 'Onde você espera a bola?' : 'O rival está se posicionando.' : serve ? myTurn ? 'Comece com intenção.' : 'Prepare-se para o saque.' : myTurn ? 'Qual é a sua próxima bola?' : 'Antecipe o próximo espaço.'}</h2>
-          <p className="decision-description">{setup ? 'Toque no seu lado da quadra, inclusive atrás da linha de fundo, e confirme.' : serve ? `${s.serveAttempt === 1 ? 'Primeiro' : 'Segundo'} serviço · lado de ${s.serveSide === 'deuce' ? 'igualdade' : 'vantagem'}. ${s.serveAttempt === 2 ? 'Uma nova falta encerra o ponto.' : 'Escolha direção, efeito e recuperação.'}` : myTurn ? scenario?.objective ?? 'Escolha o golpe e a posição que deseja proteger depois de bater.' : 'Observe onde o adversário está e como ele constrói a jogada.'}</p>
+          <div className="decision-header"><p className="eyebrow">{setup ? '01 · PREPARE A DEVOLUÇÃO' : serve ? `0${s.serveAttempt} · ESCOLHA O SAQUE` : 'LEIA. ESCOLHA. RECUPERE.'}</p><div className={`timer ${remaining !== null && remaining < 2 ? 'urgent' : ''}`}><Clock3 size={17}/>{moving ? 'Em jogo' : remaining === null ? 'Livre' : `${remaining.toFixed(1)}s`}</div>{myTurn && <details className="decision-help" key={s.turnId}>
+            <summary>Dicas</summary>
+            <div>
+              <strong>{decisionTitle}</strong>
+              <p>{decisionDescription}</p>
+              {scenario && <p>{scenario.tip}</p>}
+              {shot && <p>{SHOTS[shot].description}</p>}
+            </div>
+          </details>}</div>
+          <h2>{decisionTitle}</h2>
+          <p className="decision-description">{decisionDescription}</p>
           {s.ball && !setup && !serve && <div className="incoming-info"><Activity size={17}/><span>Recebendo <b>{SHOTS[s.ball.shot]?.label.toLowerCase() ?? 'bola recebida'}</b><small>{s.ball.contactType === 'volley' ? 'Antes do quique · voleio disponível' : s.ball.height === 'high' ? 'Trajetória alta' : s.ball.height === 'low' ? 'Trajetória baixa' : 'Altura média'} · {Math.round(s.ball.speed * 3.6)} km/h simulados</small></span><span className={`pressure ${s.ball.difficulty > .55 ? 'hard' : ''}`}>{s.ball.difficulty > .55 ? 'Sob pressão' : 'Com margem'}</span></div>}
           {myTurn && !setup && <div className="shot-options" role="group" aria-label="Escolha seu golpe">{s.options.map(id => {const def = SHOTS[id]; return <button key={id} className={`shot-option ${shot === id ? 'selected' : ''}`} onClick={() => setShot(id)} aria-pressed={shot === id}><span className="shot-option-icon">{def.height === 'high' ? <ArrowUpRight size={18}/> : <Crosshair size={18}/>}</span><span><strong>{profile.audience === 'child' ? def.childLabel : def.label}</strong><small>{def.description}</small></span><span className={`risk ${def.risk > .1 ? 'high-risk' : ''}`}>{def.risk > .1 ? 'Ousado' : 'Margem'}</span></button>;})}</div>}
           {myTurn && serve && <label className="serve-type">Tipo de saque<select value={serveType} onChange={e => setServeType(e.target.value)}><option value="kick">Kick · altura e margem</option><option value="slice">Slice · efeito lateral</option><option value="flat">Chapado · potência</option></select></label>}
@@ -217,7 +241,8 @@ function Game({room, profile, request, leave, offset, notify, replay, setReplay}
         </>}
       </aside>
     </div>
-    {showHistory && <section className="point-history panel"><h2>O caminho da partida</h2>{s.points.length ? s.points.map(p => <button key={p.number} onClick={() => {setReplay(p.decisions); setReplayKey(n => n + 1);}}><span>Ponto {p.number}</span><strong>{s.players[p.winner].name}</strong><span>{p.reason} · {p.decisions.length} golpes</span><b>{p.score.join(' : ')}</b><Play size={15}/></button>) : <p className="muted">O primeiro ponto está sendo construído.</p>}</section>}
+    </div>
+    {showHistory && <section className="point-history panel"><h2>O caminho da partida</h2>{s.points.length ? s.points.map(p => <button key={p.number} onClick={() => {setReplay(p.decisions); setReplayKey(n => n + 1); setShowHistory(false);}}><span>Ponto {p.number}</span><strong>{s.players[p.winner].name}</strong><span>{p.reason} · {p.decisions.length} golpes</span><b>{p.score.join(' : ')}</b><Play size={15}/></button>) : <p className="muted">O primeiro ponto está sendo construído.</p>}</section>}
   </>;
 }
 createRoot(document.getElementById('root')!).render(<RecoveryBoundary><App/></RecoveryBoundary>);

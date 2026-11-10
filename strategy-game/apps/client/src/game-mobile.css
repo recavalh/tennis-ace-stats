@@ -1,0 +1,452 @@
+.rotation-tip,
+.decision-help {
+  display: none;
+}
+
+.review-details {
+  display: contents;
+}
+
+@media (max-width: 680px), (orientation: landscape) and (max-width: 1000px) and (max-height: 500px) {
+  .game-header {
+    display: none;
+  }
+
+  .game-main {
+    padding: 0 max(8px, env(safe-area-inset-right)) 0 max(8px, env(safe-area-inset-left));
+  }
+
+  .game-stage {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 100vh;
+    height: 100dvh;
+    padding-block: max(4px, env(safe-area-inset-top)) max(6px, env(safe-area-inset-bottom));
+  }
+
+  .game-top {
+    position: relative;
+    z-index: 3;
+    margin: 0;
+  }
+
+  .game-top .text-button {
+    min-height: 40px;
+    font-size: 11px;
+  }
+
+  .game-top .text-button[aria-expanded="true"] {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+
+  .game-mode {
+    gap: 5px;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .game-mode > b {
+    display: none;
+  }
+
+  .scoreboard {
+    height: 40px;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .score-player {
+    flex: 1;
+    min-width: 0;
+    gap: 5px;
+    margin: 0 0 0 8px;
+  }
+
+  .score-player.right {
+    margin: 0 8px 0 0;
+  }
+
+  .score-player > span:not(.player-dot):not(.serve-ball) {
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .score-player small {
+    margin-top: 2px;
+  }
+
+  .score-player .player-dot {
+    flex: none;
+    width: 16px;
+    height: 16px;
+  }
+
+  .score-numbers {
+    gap: 10px;
+    font-size: 23px;
+  }
+
+  .game-layout {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    min-height: 0;
+  }
+
+  .game-layout .court-panel {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    min-height: 180px;
+  }
+
+  .game-layout .phaser-court,
+  .game-layout .court-loading {
+    flex: 1 1 0;
+    height: 0;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .game-layout .phaser-court canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .game-review .court-panel {
+    min-height: 160px;
+  }
+
+  .court-panel-top {
+    padding: 6px 9px 3px;
+    font-size: 8px;
+  }
+
+  .game-layout .court-legend {
+    display: none;
+  }
+
+  .court-instruction {
+    padding: 5px 8px;
+    font-size: 9px;
+  }
+
+  .decision-panel {
+    position: relative;
+    flex: none;
+    min-height: 0;
+    gap: 5px;
+    padding: 7px 8px;
+  }
+
+  .decision-panel h2 {
+    font-size: 16px;
+    letter-spacing: -.25px;
+  }
+
+  .decision-header {
+    min-height: 26px;
+  }
+
+  .decision-header .eyebrow {
+    font-size: 8px;
+  }
+
+  .decision-header .timer {
+    margin-left: auto;
+  }
+
+  .decision-help {
+    display: block;
+  }
+
+  .decision-help summary {
+    padding: 6px 8px;
+    border-radius: 5px;
+    background: #edf1e2;
+    color: #39583e;
+    font-size: 11px;
+    cursor: pointer;
+  }
+
+  .decision-help > div {
+    position: absolute;
+    z-index: 1;
+    inset: 38px 8px auto;
+    max-height: 45dvh;
+    overflow: auto;
+    padding: 10px 12px;
+    border: 1px solid #dce3d3;
+    border-radius: 7px;
+    background: #fcfcf7;
+    box-shadow: 0 6px 20px #203e3226;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .decision-help p {
+    margin: 0;
+  }
+
+  .decision-help strong {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .decision-help p + p {
+    margin-top: 7px;
+  }
+
+  .decision-description,
+  .shot-option small,
+  .shot-option-icon,
+  .decision-footnote,
+  .scenario-tip {
+    display: none;
+  }
+
+  .incoming-info {
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+
+  .incoming-info small {
+    margin-top: 1px;
+    color: #62735a;
+  }
+
+  .incoming-info .pressure {
+    padding: 3px 5px;
+    font-size: 9px;
+    color: #52663b;
+  }
+
+  .incoming-info .pressure.hard {
+    color: #7c582e;
+  }
+
+  .shot-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .shot-option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px;
+    min-height: 44px;
+    padding: 4px 7px;
+  }
+
+  .shot-option strong {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+
+  .shot-option .risk {
+    margin: 0;
+    font-size: 8px;
+    color: #52663b;
+  }
+
+  .shot-option .high-risk {
+    color: #7c582e;
+  }
+
+  .serve-type {
+    font-size: 12px;
+  }
+
+  .serve-type select {
+    min-height: 44px;
+    font-size: 12px;
+  }
+
+  .recovery-heading {
+    padding-top: 0;
+  }
+
+  .recovery-heading > span,
+  .recovery-heading small {
+    color: #51674b;
+  }
+
+  .suggested-positions button {
+    min-height: 44px;
+    padding: 4px;
+    font-size: 11px;
+    color: #40583c;
+  }
+
+  .decision-panel > .button {
+    min-height: 44px;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .confirm-button {
+    margin-top: 0;
+  }
+
+  .opponent-wait,
+  .paused-content {
+    min-height: 0;
+    padding: 9px 0;
+    gap: 6px;
+  }
+
+  .opponent-wait p {
+    margin: 4px 0 0;
+  }
+
+  .waiting-orbit {
+    display: none;
+  }
+
+  .review-result .result-icon {
+    display: none;
+  }
+
+  .review-result h2,
+  .review-result > .eyebrow {
+    margin-bottom: 3px;
+  }
+
+  .review-details {
+    display: grid;
+    gap: 5px;
+    max-height: clamp(64px, calc(100dvh - 460px), 330px);
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+
+  .game-review .decision-panel {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
+  }
+
+  .game-review .decision-panel > :not(.button) {
+    grid-column: 1 / -1;
+  }
+
+  .game-review .decision-panel > .button {
+    gap: 5px;
+  }
+
+  .game-main .point-history {
+    position: fixed;
+    z-index: 2;
+    inset: calc(46px + env(safe-area-inset-top)) max(8px, env(safe-area-inset-right)) auto max(8px, env(safe-area-inset-left));
+    max-height: 65dvh;
+    margin: 0;
+    overflow: auto;
+    box-shadow: 0 8px 24px #203e3233;
+  }
+}
+
+@media (max-width: 680px) and (orientation: portrait) {
+  .rotation-tip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    padding: 4px;
+    border-radius: 5px;
+    background: #edf1e2;
+    color: #39583e;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .rotation-tip svg {
+    transform: rotate(90deg);
+  }
+
+  .decision-help > div {
+    inset: auto 8px calc(100% - 5px);
+  }
+}
+
+@media (max-width: 680px) and (max-height: 620px) and (orientation: portrait) {
+  .game-stage {
+    gap: 4px;
+  }
+
+  .scoreboard {
+    height: 36px;
+  }
+
+  .game-layout .court-panel {
+    min-height: 136px;
+  }
+
+  .court-instruction,
+  .decision-panel > h2,
+  .recovery-heading {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) and (max-height: 500px) {
+  .game-stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    grid-template-rows: auto 1fr;
+  }
+
+  .game-layout {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: inherit;
+  }
+
+  .game-layout .court-panel {
+    min-height: 0;
+  }
+
+  .decision-header .eyebrow {
+    letter-spacing: .6px;
+  }
+
+  .recovery-heading {
+    display: none;
+  }
+
+  .review-details {
+    max-height: max(55px, calc(100dvh - 240px));
+  }
+
+  .game-main .point-history {
+    right: auto;
+    width: min(40vw, 380px);
+  }
+}
+
+@media (orientation: landscape) and (min-width: 620px) and (max-width: 1000px) and (max-height: 500px) {
+  .shot-options {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1000px) and (max-height: 330px) {
+  .decision-panel > h2 {
+    display: none;
+  }
+
+  .incoming-info {
+    padding-block: 3px;
+  }
+}

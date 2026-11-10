@@ -1,0 +1,72 @@
+name: Publicar Tennis Tático
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'strategy-game/**'
+      - '.github/workflows/deploy-game.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tennis-tatico-production
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: strategy-game
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+          cache: npm
+          cache-dependency-path: strategy-game/package-lock.json
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Testar jogo
+        run: npm test
+
+      - name: Compilar jogo
+        run: npm run build
+        env:
+          VITE_GAME_SERVER_URL: https://ace-stats-game.onrender.com
+
+      - name: Preparar Wrangler
+        run: npm exec --yes --package=wrangler@4.160.0 -- wrangler --version
+
+      - name: Validar destinos de produção
+        run: node scripts/publish-game.mjs preflight
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+
+      - name: Publicar servidor no Render
+        run: node scripts/publish-game.mjs render
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+
+      - name: Publicar interface no Cloudflare Pages
+        run: >-
+          npm exec --yes --package=wrangler@4.160.0 -- wrangler pages deploy dist/client
+          --project-name=ace-stats-game --branch=main --commit-hash="$GITHUB_SHA" --commit-dirty=false
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      - name: Confirmar versão no domínio público
+        run: node scripts/publish-game.mjs verify

@@ -207,7 +207,14 @@ export async function createGameServer(options: { database?: string; databaseUrl
     void tickWork.catch(() => console.error('Falha ao atualizar uma sala.'));
   }, 50);
   const addresses = () => Object.values(networkInterfaces()).flat().filter(n => n && n.family === 'IPv4' && !n.internal && /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/.test(n.address)).map(n => n!.address);
-  app.get('/api/health', (_req, res) => res.set('Cache-Control','no-store').json({ok: true, game: 'Tennis Tático', buildId, rooms: rooms.size, addresses: process.env.HOST === '0.0.0.0' ? addresses() : []}));
+  app.get('/api/health', (_req, res) => res.set('Cache-Control', 'no-store').json({
+    ok: true,
+    game: 'Tennis Tático',
+    buildId,
+    commit: process.env.RENDER_GIT_COMMIT,
+    rooms: rooms.size,
+    addresses: process.env.HOST === '0.0.0.0' ? addresses() : [],
+  }));
   app.get('/api/auth/config', (_req, res) => res.set('Cache-Control','no-store').json(authConfig));
   app.get('/api/scenarios', (_req, res) => res.json(SCENARIOS));
   let vite: {close: () => Promise<void>} | undefined;

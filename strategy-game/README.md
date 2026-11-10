@@ -68,6 +68,12 @@ Para upload direto, compile localmente com essa mesma variável e envie dist/cli
 
 Associe app.ace-stats.com ao projeto Pages e adicione no provedor DNS o CNAME exato fornecido pelo Cloudflare. O domínio principal pode continuar no GitHub Pages.
 
+## Publicação pelo GitHub
+
+Envie as alterações do jogo na pasta `strategy-game` para o ramo `main`. A ação **Publicar Tennis Tático** testa e compila o código, publica o commit no Render e aguarda a confirmação desse build para enviar a interface ao Cloudflare Pages. A ação também pode ser executada manualmente pelo GitHub em `main`.
+
+O repositório usa a variável `CLOUDFLARE_ACCOUNT_ID` e os segredos `CLOUDFLARE_API_TOKEN` (edição de Pages na conta Ace Stats) e `RENDER_DEPLOY_HOOK_URL` (hook do serviço ace-stats-game). O Render é acionado pela ação do GitHub para publicar a revisão que passou nos testes.
+
 ## Verificação
 
     npm run check
