@@ -37,13 +37,13 @@ jobs:
       - name: Instalar dependências
         run: npm ci
 
-      - name: Testar jogo
-        run: npm test
-
       - name: Compilar jogo
         run: npm run build
         env:
           VITE_GAME_SERVER_URL: https://ace-stats-game.onrender.com
+
+      - name: Testar jogo
+        run: npm test
 
       - name: Preparar Wrangler
         run: npm exec --yes --package=wrangler@4.160.0 -- wrangler --version
